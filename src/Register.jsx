@@ -7,36 +7,73 @@ export const Register = (props) => {
     const [confPass, setConfPass] = useState('');
     const [error, setError] = useState('');
 
+    const validateForm = () => {
+        let isValid = true;
+        const errors = {};
+
+        if (!name) {
+            errors.name = 'Full Name is required';
+            isValid = false;
+        }
+
+        if (!email) {
+            errors.email = 'Email is required';
+            isValid = false;
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            errors.email = 'Invalid email address';
+            isValid = false;
+        }
+
+        if (!pass) {
+            errors.password = 'Password is required';
+            isValid = false;
+        } else if (pass.length < 6) {
+            errors.password = 'Password must be at least 6 characters';
+            isValid = false;
+        }
+
+        if (pass !== confPass) {
+            errors.confirmPassword = 'Passwords do not match';
+            isValid = false;
+        }
+
+        setError(errors);
+        return isValid;
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-    
-        if (pass === confPass) {
-            setError(''); // Curăță mesajul de eroare dacă parolele sunt corecte
+
+        if (validateForm()) {
+            setError(''); // Clear error message if passwords are correct
             console.log('Registration successful');
-            // Continuă cu procesul de înregistrare
-        } else {
-            setError('Passwords do not match');
+            // Continue with the registration process
         }
     };
-    
 
     return (
         <div className="auth-form-container">
             <h2>Register</h2>
-        <form className="register-form" onSubmit={handleSubmit}>
-            <label htmlFor="name">Full Name</label>
-            <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="full Name" />
-            <label htmlFor="email">Email</label>
-            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-            <label htmlFor="password">Password</label>
-            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-            <label htmlFor="confirm-password">Confirm Password</label>
-            <input value={confPass} onChange={(e) => setConfPass(e.target.value)} type="password" placeholder="********" id="confirm-password" name="confirm-password" />
-            {error && <p className="error-message">{error}</p>}
-            <button type="submit">Log In</button>
-        </form>
-        <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
-    </div>
+            <form className="register-form" onSubmit={handleSubmit}>
+                <label htmlFor="name">Full Name</label>
+                <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="Full Name" />
+                {error.name && <p className="error-message">{error.name}</p>}
+
+                <label htmlFor="email">Email</label>
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email" />
+                {error.email && <p className="error-message">{error.email}</p>}
+
+                <label htmlFor="password">Password (6 or more characters)</label>
+                <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Password" id="password" name="password" />
+                {error.password && <p className="error-message">{error.password}</p>}
+
+                <label htmlFor="confirm-password">Confirm Password</label>
+                <input value={confPass} onChange={(e) => setConfPass(e.target.value)} type="password" placeholder="Confirm Password" id="confirm-password" name="confirm-password" />
+                {error.confirmPassword && <p className="error-message">{error.confirmPassword}</p>}
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
+        </div>
     )
 }
