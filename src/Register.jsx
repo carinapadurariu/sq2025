@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
@@ -41,15 +42,25 @@ export const Register = (props) => {
         return isValid;
     };
 
+    function showMessage()
+    {
+        window.alert('Your request was submitted. You will be redirected to the login page');
+        props.onFormSwitch('login'); // Navigate back to the login page
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
         if (validateForm()) {
-            setError(''); // Clear error message if passwords are correct
+            setError('');
+            setIsRegistrationSuccessful(true); // Set registration success
+            showMessage();
             console.log('Registration successful');
             // Continue with the registration process
         }
     };
+
+
 
     return (
         <div className="auth-form-container">
@@ -72,7 +83,9 @@ export const Register = (props) => {
                 {error.confirmPassword && <p className="error-message">{error.confirmPassword}</p>}
 
                 <button type="submit">Sign Up</button>
+
             </form>
+
             <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
         </div>
     )
