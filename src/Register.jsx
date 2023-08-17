@@ -53,7 +53,6 @@ export const Register = (props) => {
 
         if (validateForm()) {
             setError('');
-            setIsRegistrationSuccessful(true); // Set registration success
             showMessage();
             console.log('Registration successful');
             // Continue with the registration process
