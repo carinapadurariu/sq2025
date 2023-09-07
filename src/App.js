@@ -6,6 +6,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import {Contact} from "./components/Contact";
 
+
 function App() {
 
     return (

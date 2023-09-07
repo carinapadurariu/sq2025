@@ -3,7 +3,6 @@ const BASE_URL = 'https://team1-backend-jpdqtnohpq-uc.a.run.app/swagger-ui/index
 
 export default axios.create({
     baseURL: BASE_URL
-    
 });
 
 export const axiosPrivate = axios.create({

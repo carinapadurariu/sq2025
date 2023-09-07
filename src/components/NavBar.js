@@ -12,8 +12,6 @@ export const MyNavBar = (props) => {
 
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
-    const navigate = useNavigate();
-
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY > 50) {
@@ -62,6 +60,7 @@ export const MyNavBar = (props) => {
                         </Nav.Link>
                     </nav>
                     <span className="navbar-text">
+
             <ul>
               <li>
                 <a target="_blank"
@@ -96,5 +95,6 @@ export const MyNavBar = (props) => {
             </Container>
         </Navbar>
     );
+
 }
 
