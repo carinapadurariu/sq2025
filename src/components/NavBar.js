@@ -5,12 +5,14 @@ import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome,faUser } from '@fortawesome/free-solid-svg-icons';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
+import {useNavigate} from "react-router-dom";
 
 
 export const MyNavBar = (props) => {
 
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
+    const navigate = useNavigate();
   
     useEffect(() => {
       const onScroll = () => {
@@ -28,6 +30,11 @@ export const MyNavBar = (props) => {
   
     const onUpdateActiveLink = (value) => {
       setActiveLink(value);
+    }
+
+    const handleConnectClick = () => {
+        console.log('connect');
+        navigate('/login');
     }
 
   return (
@@ -106,8 +113,12 @@ export const MyNavBar = (props) => {
                 </a>
               </li>
             </ul>
-            <button className="vvd" onClick={() => {console.log('connect'); props.setShowLoginComponent(true)}}><span>Let's Connect</span></button>
-          </span>
+                <button className="vvd" onClick={handleConnectClick}>
+                  <span>
+                      Let's Connect
+                  </span>
+                </button>
+            </span>
         </Navbar.Collapse>
       </Container>
     </Navbar>
