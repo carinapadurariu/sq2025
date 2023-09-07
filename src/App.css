@@ -379,15 +379,69 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-/* .background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  z-index: -5;
-  background-image: url('./assets/img/bricks.png');
 
-} */
+
+.intro-about {
+  font-family: Arial, sans-serif; /* Setarea fontului */
+  font-size: 18px; /* Dimensiunea textului */
+  line-height: 1.5; /* Înălțimea liniei pentru o lizibilitate mai bună */
+  color: #fff; /* Culoarea textului */
+  margin-top: 65px;
+}
+
+.intro-title {
+  font-weight: bold; /* Ingroasa scrisul pentru titlu */
+  color: #cfcdab; /* Culoarea titlului */
+}
+
+
+
+.custom-h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+    font-size: 23px;
+    color: #beccd6c2;
+}
+
+.custom-list {
+
+ margin-top: 75px;
+ font-weight: bold;
+    font-size: 23px;
+    color: #f4f5f6c2;
+}
+
+.custom-list li {
+  margin-bottom: 10px;
+  background-image: url('./assets/img/car-icon1.png'); /* Calea către imagine */
+  background-size: 25px 20px; /* Dimensiunile imaginii */
+  background-repeat: no-repeat; /* Opriți repetarea imaginii */
+  background-position: left center; /* Poziția imaginii în stânga */
+  padding-left: 25px; 
+}
+
+
+
+
+
+.right-align {
+  text-align: right; /* Alinează elementele la dreapta */
+  float: right; /* Permite elementelor să fie pe aceeași linie și să fie aliniate la dreapta */
+  clear: right; /* Asigură ca elementele din stânga să nu se suprapună pe cele din dreapta */
+  width: 50%; /* Lățimea pentru elementele din dreapta (50% pentru a le face să se încadreze pe aceeași linie) */
+}
+
+.container-about {
+  border: 2px solid #b08e5f; /* Borda containerului */
+  border-radius:44px;
+  padding: 45px; /* Spațierea interioară a containerului */
+  margin: 20px 20px; /* Margini exterioare pentru separare */
+  background-color: #33321c /* Culoarea de fundal a containerului */
+}
+
+
 
 .footer {
 
@@ -467,6 +521,46 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 20px;
 }
 
+.video-background{
+  opacity: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.about-content{
+  margin-bottom: 35%;
+  
+}
+
+.container-contact-page{
+  margin-top: 10%;
+  background-color: rgb(181, 167, 88) ;
+  padding: 20px;
+  /* margin: 20px; */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10%;
+}
+
+.container-contact-page h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.container-contact-page p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.span-email-color {
+  color: #007bff; /* sau orice altă culoare dorită */
+}
 
 
 .container-about-page {
@@ -481,6 +575,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 300px;
   height: 300px;
   perspective: 1200px;
+  margin-left: 37%;
+  margin-top: -30%;
+  margin-bottom: 60px;
+  float: right;
+  margin-right: 100px;
 }
 
 .cubespinner {
@@ -541,7 +640,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 
-
+.about-info-text{
+  float: right;
+    margin-right: 8%;
+    margin-top: -33%;
+    text-decoration: underline;
+}
 
 .about-style-title {
 position: absolute;
@@ -551,6 +655,97 @@ position: absolute;
   transform: translateX(-50%);
 }
 
+.color-paragraph{
+  color: rgb(182, 179, 163);
+}
+
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  float: right;
+  margin-top: -19%;
+  margin-right: 5%;
+  font-weight: 300;
+  color: #afb2ae;
+  font-size: 25px;
+}
+
+.left-column,
+.right-column {
+  flex-basis: 48%; 
+}
+
+.subtext-about{
+  float: right;
+    width: 50%;
+    margin-top: -28%;
+    font-weight: 300;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+
+
+
+.image-container {
+  display: flex; 
+  align-items: center; 
+}
+
+.about-pic {
+  width: 50%;
+  margin-right: 20px;
+  margin-top: 46px;
+  float: right;
+  border-radius: 55px;
+}
+
+.service-description{
+  margin-top: 6%;
+    margin-right: 59px;
+    font-weight: 400;
+    color: #afb2ae;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.list-about-item{
+  margin-bottom: 10px;
+}
+
+.icon{
+  width: 47%;
+  border-radius: 65px;
+  margin-top: 60px;
+}
+
+.service-picture {
+  width: 200px;
+  height: auto;
+}
+
+.section_text_p1{
+  margin-top: 11%;
+  display: flex;
+  justify-content: center;
+  height: 8vh;
+  font-weight: 900;
+  font-size: 44px;
+  color: #fffffd;
+}
+
+.title-section1{
+  margin-top: -2%;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 28px;
+  color: #dedaaf;
+}
 
 .text-animate {
   display: inline-block;
@@ -574,10 +769,62 @@ position: absolute;
 }
 
 
+.service-features{
+  color: #c2c2c2;
+    margin-top: -36px;
+    font-style: unset;
+    border: 5px solid #a29756;
+    border-radius: 10px;
+    border-style: groove;
+    margin-right: 57%;
+}
+
+
+/* .contact-form {
+  width: 100%;
+  margin-top: 5%;
+} */
+
 .contact-form {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 5%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+.contact-h1{
+  font-size: 45px;
+  margin-left: 23px;
+  line-height: 66px;
+  color: rgb(14, 13, 13);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #1c1a1a;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* .contact-form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+} */
+
+
+
 
 .contact-form ul { 
   padding: 0;
@@ -606,7 +853,8 @@ position: absolute;
 }
 
 .contact-form :first-child{
-  margin-left: 0;
+
+  width: 75%;
 }
 
 
@@ -639,16 +887,19 @@ textarea {
 }
 
 .flat-button{
-  color: #d7bb2f;
-  background-color: 0 0;
-  letter-spacing: 3px;
-  text-decoration: none;
-  padding: 8px 10px;
-  border: 1px solid #d7bb2f;
-  float: right;
-  border-radius: 4px;
+  color: #1d1d1b;
+    background-color: 0 0;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 8px 10px;
+    border: 1px solid #7d7342;
+    float: right;
+    border-radius: 4px;
+    margin-right: 9%;
 
 }
+
+
 
 
 
@@ -680,18 +931,56 @@ textarea {
 
 
 .map-wrap {
-  background: rgba(217, 217, 217, 0.1);
+  background: rgba(8, 253, 216, 0.1);
   float: right;
   width: 53%;
-  height: 100%;
+  height: 115%;
+  margin-top: -3%;
 }
 
-
 .leaflet-container {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
   opacity: 0;
   animation: backInRight 1s 1.2s;
   animation-fill-mode: forwards;
+}
+
+.info-map {
+  position: absolute;
+  background: #000;
+  top: 50px;
+  right: 30%;
+  z-index: 999999;
+  width: 267px;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 17px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s;
+  animation-fill-mode: forwards;
+
+  span {
+    font-size: 16px;
+
+    span {
+      color: #ffd700;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .map-wrap {
+    float: none;
+    margin: 0;
+    width: 100%;
+    height: 400px;
+  }
+  
+  .info-map {
+    display: none;
+  }
 }

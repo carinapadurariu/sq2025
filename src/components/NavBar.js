@@ -3,7 +3,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from '../assets/img/logo.png';
 import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome,faUser } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faHome,faNewspaper,faUser } from '@fortawesome/free-solid-svg-icons';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -61,7 +61,7 @@ export const MyNavBar = (props) => {
               props.setPageState('about')
              }
              } >
-              <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+              <FontAwesomeIcon icon={faNewspaper} color="#4d4d4e" />
             </Nav.Link>
             <Nav.Link exact="true"
              activeclassname="active" 
