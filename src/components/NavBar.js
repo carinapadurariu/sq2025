@@ -12,6 +12,8 @@ export const MyNavBar = (props) => {
 
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
+    const navigate = useNavigate();
+
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY > 50) {
