@@ -60,11 +60,11 @@ const Login = () => {
   }
 
   return (
-
-      <section>
+  <body className="login-body">
+      <section className="login-section">
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-        <h1>Sign In</h1>
-        <form onSubmit={handleSubmit}>
+        <h1 className="login-signIn">Sign In</h1>
+        <form className="login-form" onSubmit={handleSubmit}>
           <label htmlFor="username">Username:</label>
           <input
               type="text"
@@ -74,6 +74,7 @@ const Login = () => {
               onChange={(e) => setUsername(e.target.value)}
               value={username}
               required
+              className="login-input"
           />
 
           <label htmlFor="password">Password:</label>
@@ -83,17 +84,20 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               required
+              className="login-input"
+
           />
-          <button>Sign In</button>
+          <button className="login-button">Sign In</button>
 
         </form>
-        <p>
+        <p className="login-register-button">
           Need an Account?<br />
           <span className="line">
-                    <Link to="/register">Sign Up</Link>
+                    <Link className="login-signUp" to="/register">Sign Up</Link>
                 </span>
         </p>
       </section>
+  </body>
   )
 }
 

@@ -729,12 +729,9 @@ textarea {
   justify-content: space-evenly;
   flex-grow: 1;
   padding-bottom: 1rem;
-}
-
-
-.login-form {
   text-align: center;
 }
+
 
 
 .login-button {
@@ -756,6 +753,15 @@ textarea {
 
 .login-register-button {
   text-align: center;
+}
+
+.login-signUp {
+  background-color: grey;
+  margin-top: 5px;
+  text-align: center;
+  padding: 0.1rem 2%;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
 #firstName,
@@ -793,6 +799,7 @@ textarea {
 
 .register-form {
   text-align: center;
+
 }
 
 .register-input {
@@ -803,7 +810,36 @@ textarea {
   border-radius: 0.5rem;
 }
 
-.register-line {
+.register-button {
+  background-color: #8c8c8c;
+  color:white;
+  text-align: center;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+}
+
+.register-signUp {
+  background-color: #8c8c8c;
+  color:white;
+  text-align: center;
+  padding: 0.4rem 42%;
+  border-radius: 0.5rem;
+  margin-top: 20px;
+
+}
+
+.register-button-signIn{
+
+  background-color: grey;
+  margin-top: 5px;
+  text-align: center;
+  padding: 0.1rem 2%;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.register-login-button {
+  margin-top: 10px;
   text-align: center;
 }
 
