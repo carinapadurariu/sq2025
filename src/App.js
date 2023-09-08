@@ -1,10 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import the necessary routing components
 import "bootstrap/dist/css/bootstrap.min.css";
-import Contact from "./components/Contact";
 import Home from "./pages/Home";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import {Contact} from "./components/Contact";
+
 
 function App() {
 
