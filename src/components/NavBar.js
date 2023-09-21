@@ -5,6 +5,7 @@ import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome,faNewspaper,faUser } from '@fortawesome/free-solid-svg-icons';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
+import { faCar } from '@fortawesome/free-solid-svg-icons';
 
 
 export const MyNavBar = (props) => {
@@ -78,6 +79,18 @@ export const MyNavBar = (props) => {
             <Nav.Link exact="true" activeclassname="active" className="map-link" to="/map">
               <FontAwesomeIcon icon={faMap} color="#4d4d4e" />
             </Nav.Link>
+            <Nav.Link
+             exact="true"
+            activeclassname="active"
+              className="car-link"
+             to="/car"
+             onClick={() => {
+             console.log('gotocar');
+               props.setPageState('car');
+  }}
+>
+  <FontAwesomeIcon icon={faCar} color="#4d4d4e" />
+</Nav.Link>
           </nav>
           <span className="navbar-text">
             <ul>

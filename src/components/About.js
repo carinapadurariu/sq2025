@@ -11,6 +11,17 @@ import {
 import serviceImg from '../assets/img/service1.png';
 import contactImg from '../assets/img/contactImg.png';
 import videoBackground from '../assets/img/cinematic-car-service.mp4'
+import { Dropdown } from 'react-bootstrap';
+import car1Img from '../assets/img/car4.png'
+import engineImg from '../assets/img/engine1.png'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import engine2Img from '../assets/img/engine.png'
+import elec1Img from '../assets/img/elec.png'
+import pollImg from '../assets/img/pollution.png'
+import transmImg from '../assets/img/transm.png'
+import brakeImg from '../assets/img/brake.png'
+import awardImg from '../assets/img/award.png'
 
 export const About = () => {
   return (
@@ -97,7 +108,176 @@ export const About = () => {
         <li className="list-about-item">Transparency and upfront costs</li>
       </ul>
     </div>
+    <h3 className="h3-text">
+      Which Problem Fits You The Best?
+    </h3>
+    <div className="drop-down">
+    <Dropdown className="d-inline mx-2">
+  <Dropdown.Toggle id="dropdown-autoclose-true">
+    Wheels
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu className="dropdown-pink-background">
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
+
+<Dropdown className="d-inline mx-2" autoClose="inside">
+  <Dropdown.Toggle id="dropdown-autoclose-inside">
+  Check Engine
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu className="dropdown-pink-background">
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
+
+<Dropdown className="d-inline mx-2" autoClose="inside">
+  <Dropdown.Toggle id="dropdown-autoclose-inside">
+  Electrical Problems
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu className="dropdown-pink-background">
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
+
+<Dropdown className="d-inline mx-2" autoClose="inside">
+  <Dropdown.Toggle id="dropdown-autoclose-inside">
+  Emissions or Pollution Control Problems
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu className="dropdown-pink-background">
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
+
+<Dropdown className="d-inline mx-2" autoClose="outside">
+  <Dropdown.Toggle id="dropdown-autoclose-outside">
+  Transmission Issues
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu className="dropdown-pink-background">
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
+
+<Dropdown className="d-inline mx-2" autoClose={false}>
+  <Dropdown.Toggle id="dropdown-autoclose-false">
+  Brake System Problems
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu className="dropdown-pink-background">
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
+    </div>
+    <img className="image-design1" src={car1Img} />
+    <img className="image-design2" src={engineImg} />
+    <img className="image-design3" src={awardImg} />
+    
       </div>
+      <div className="cards-about">
+    <Card style={{  width: '18rem',
+         backgroundColor: '#8b8049',
+         marginBottom: '33px', 
+         marginLeft: '27px', 
+         position: 'inherit'
+     }}>
+      <Card.Img variant="top" src={engine2Img} />
+      <Card.Body>
+        <Card.Title>Check Engine</Card.Title>
+        <Card.Text>
+        Check engine light illuminated? 
+        Bring your vehicle to our service center for a thorough inspection.
+        </Card.Text>
+        <Button variant="primary">Go Check The Car</Button>
+      </Card.Body>
+    </Card>
+
+    <Card style={{  width: '18rem',
+         backgroundColor: '#8b8049',
+         marginBottom: '33px',
+         marginLeft: '27px', 
+         position: 'inherit'
+     }}>
+      <Card.Img variant="top" src={elec1Img} />
+      <Card.Body>
+      <br/>
+        <Card.Title>Electrical Problems</Card.Title>
+        <Card.Text>
+         
+        Experiencing electrical issues?
+        Schedule a service appointment to diagnose and resolve your car's problems.
+        </Card.Text>
+        <Button variant="primary">Go Check The Car</Button>
+      </Card.Body>
+    </Card>
+
+    <Card style={{  width: '18rem',
+         backgroundColor: '#8b8049',
+         marginBottom: '33px',
+         marginLeft: '27px', 
+         position: 'inherit'
+     }}>
+      <Card.Img variant="top" src={pollImg} />
+      <Card.Body>
+        <Card.Title>Emissions & Pollution</Card.Title>
+        <Card.Text>
+        Concerned about pollution and emissions? 
+        Visit our auto services for an eco-friendly and safe solution for your vehicle.
+        </Card.Text>
+        <Button variant="primary">Go Check The Car</Button>
+      </Card.Body>
+    </Card>
+
+    <Card style={{  width: '18rem',
+         backgroundColor: '#8b8049',
+         marginBottom: '33px',
+         marginLeft: '27px',
+         position: 'inherit'
+     }}>
+      <Card.Img variant="top" src={transmImg} />
+      <Card.Body>
+        <Card.Title>Transmission Issues</Card.Title>
+        <Card.Text>
+        Experience smooth driving?
+        Entrust your car's transmission issues to our expert repair services today.
+        </Card.Text>
+        <Button variant="primary">Go Check The Car</Button>
+      </Card.Body>
+    </Card>
+
+    <Card style={{  width: '18rem',
+         backgroundColor: '#8b8049',
+         marginBottom: '33px', 
+         marginLeft: '27px',
+         position: 'inherit'
+     }}>
+      <Card.Img variant="top" src={brakeImg}  />
+      <Card.Body>
+        <Card.Title>Brake System Problems</Card.Title>
+        <Card.Text>
+        For brake system concerns, ensure your safety by 
+        scheduling a thorough inspection and maintenance with us.
+        </Card.Text>
+        <Button variant="primary">Go Check The Car</Button>
+      </Card.Body>
+    </Card>
+
+    </div>
       {/* <div className="stage-cube-cont">
       <div className="cubespinner">
              <div className="face1">
