@@ -126,4 +126,3 @@ export const MyNavBar = (props) => {
     </Navbar>
   );
 }
-
