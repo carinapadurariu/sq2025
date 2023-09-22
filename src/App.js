@@ -4,7 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import {Contact} from "./components/Contact";
+import Contact from "./components/Contact";
+import Admin from "./components/Admin";
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="register" element={<Register />}/>
+                    <Route path="/register" element={<Register />}/>
+                    <Route path="/admin" element={<Admin />}/>
                 </Routes>
             </div>
         </Router>

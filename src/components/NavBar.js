@@ -5,6 +5,7 @@ import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome,faUser } from '@fortawesome/free-solid-svg-icons';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
+import { faShieldHalved } from '@fortawesome/free-solid-svg-icons';
 import {useNavigate} from "react-router-dom";
 
 
@@ -59,6 +60,9 @@ export const MyNavBar = (props) => {
                         </Nav.Link>
                         <Nav.Link exact="true" activeclassname="active" className="map-link" to="/map">
                             <FontAwesomeIcon icon={faMap} color="#4d4d4e" />
+                        </Nav.Link>
+                        <Nav.Link exact="true" activeclassname="active" className="admin-link" to="/admin">
+                            <FontAwesomeIcon icon={faShieldHalved} color="#4d4d4e" />
                         </Nav.Link>
                     </nav>
                     <span className="navbar-text">
