@@ -3,13 +3,14 @@ import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import {HOST} from './constants'
 
 const NAME_REGEX = /^[A-Za-z\s'-]{1,50}$/;
 const PHONE_NUMBER_REGEX = /^\d{10}$/;
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const EMAIL_REGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-const REGISTER_URL = 'https://team1-backend-jpdqtnohpq-uc.a.run.app/api/auth/signup';
+const REGISTER_URL = HOST + '/api/auth/signup';
 
 const Register = () => {
     const userRef = useRef();
