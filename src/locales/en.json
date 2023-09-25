@@ -1,0 +1,7 @@
+{
+    "HomeScreen": {
+        "welcome": "Welcome to Our Page",
+        "salute": "Hi! Let's Start Travelling",
+        "description": "This is a simple application where you can search for car services, itps stations or gas stations in your area. You can also search for a specific location and get directions to it."
+    }
+}
