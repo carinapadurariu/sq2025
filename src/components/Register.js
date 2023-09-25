@@ -3,7 +3,7 @@ import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import {localUrl} from "./GlobalVariables";
+import {HOST} from './constants'
 
 const NAME_REGEX = /^[A-Za-z\s'-]{1,50}$/;
 const PHONE_NUMBER_REGEX = /^\d{10}$/;
@@ -95,7 +95,7 @@ const Register = () => {
         }
 
         try {
-            const response = await axios.post(localUrl + 'api/auth/signup',
+            const response = await axios.post(HOST  + 'api/auth/signup',
                 JSON.stringify({firstName:firstName, lastName:lastName,
                     phoneNumber:phoneNumber, email:email, username: username, password: password}),
                 {
