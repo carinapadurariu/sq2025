@@ -30,6 +30,8 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
+  background-image: url('./assets/img/banner-bg.png');
+  background-size: 100%;
   background-color: #121212 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
