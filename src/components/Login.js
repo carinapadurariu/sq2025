@@ -1,16 +1,13 @@
 import { useRef, useState, useEffect } from 'react';
 import useAuth from '../hooks/useAuth';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import axios from "axios";
-
-const LOGIN_URL = 'https://team1-backend-jpdqtnohpq-uc.a.run.app/api/auth/login';
+import {HOST} from './constants'
+const LOGIN_URL =  HOST + 'api/auth/login';
 
 const Login = () => {
-  const { setAuth } = useAuth();
 
   const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
 
   const userRef = useRef();
   const errRef = useRef();
@@ -39,12 +36,14 @@ const Login = () => {
       );
       console.log(JSON.stringify(response?.data));
       const accessToken = response?.data?.token;
+      console.log(accessToken);
       const roles = response?.data?.roles;
-      setAuth({ username: username, password: password, roles, accessToken });
       localStorage.setItem('token', accessToken);
-      setUsername('');
-      setPassword('');
-      navigate(from, { replace: true });
+
+      navigate('/userpage');
+
+
+
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
@@ -60,7 +59,7 @@ const Login = () => {
   }
 
   return (
-  <body className="login-body">
+      <body className="login-body">
       <section className="login-section">
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
         <h1 className="login-signIn">Sign In</h1>
@@ -97,7 +96,7 @@ const Login = () => {
                 </span>
         </p>
       </section>
-  </body>
+      </body>
   )
 }
 

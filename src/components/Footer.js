@@ -6,7 +6,7 @@ import logo from '../assets/img/logo.png';
 // import navIcon3 from "../assets/img/nav-icon3.svg";
 import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -50,6 +50,7 @@ export const Footer = () => {
             </div>
             <p>Copyright 2022. All Rights Reserved</p>
           </Col>
+          
         </Row>
       </Container>
     </footer>
