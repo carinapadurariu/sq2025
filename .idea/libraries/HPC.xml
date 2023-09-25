@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="HPC">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/HPC.zip!/" />
+      <root url="jar://$PROJECT_DIR$/HomePage.zip!/" />
+      <root url="jar://$PROJECT_DIR$/HomePageConnect.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
