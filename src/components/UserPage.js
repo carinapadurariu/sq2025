@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
-import {HOST} from './constants'
+import { Link } from 'react-router-dom';
+import {HOST} from "./constants";
 
 const UserProfile = () => {
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true);
-    
 
     useEffect(() => {
         // Fetch user data using the authentication token
@@ -19,21 +18,20 @@ const UserProfile = () => {
             return;
         }
 
-        axios.get(HOST + 'profile', {
-        headers: {
-            Authorization: `Bearer ${authToken}`,
-        },
-    })
-
-        .then((response) => {
-             setUser(response.data);
-             setLoading(false);
-        })
-        .catch((error) => {
-            console.error('Error fetching user data:', error);
-             setLoading(false);
-        });
-
+        axios
+            .get(HOST + 'profile', {
+                headers: {
+                    Authorization: `Bearer ${authToken}`,
+                },
+            })
+            .then((response) => {
+                setUser(response.data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error('Error fetching user data:', error);
+                setLoading(false);
+            });
     }, []);
 
     if (loading) {
@@ -41,15 +39,31 @@ const UserProfile = () => {
     }
 
     return (
-        <div>
-            <h2>User Profile</h2>
-            <p className="profile-username"><strong>Username:</strong> {user.username}</p>
-            <p><strong>Email:</strong> {user.email}</p>
-            <p><strong>First Name:</strong> {user.firstName}</p>
-            <p><strong>Last Name:</strong> {user.lastName}</p>
-            <p><strong>Phone:</strong> {user.phoneNumber}</p>
-            <p><strong>Role:</strong> {user.roles}</p>
-            <Link className="userPage-editProfileButton" to="/edituserprofile">Edit Profile</Link>
+        <div className="user-profile-container">
+            <form className="userPage-form">
+                <h2>User Profile</h2>
+                <p className="profile-username">
+                    <strong>Username:</strong> {user.username}
+                </p>
+                <p>
+                    <strong>Email:</strong> {user.email}
+                </p>
+                <p>
+                    <strong>First Name:</strong> {user.firstName}
+                </p>
+                <p>
+                    <strong>Last Name:</strong> {user.lastName}
+                </p>
+                <p>
+                    <strong>Phone:</strong> {user.phoneNumber}
+                </p>
+                <p>
+                    <strong>Role:</strong> {user.roles}
+                </p>
+                <Link className="userPage-editProfileButton" to="/edituserprofile">
+                    Edit Profile
+                </Link>
+            </form>
         </div>
     );
 };
