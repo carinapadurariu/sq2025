@@ -1,16 +1,13 @@
 import { useRef, useState, useEffect } from 'react';
 import useAuth from '../hooks/useAuth';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import axios from "axios";
 import {HOST} from './constants'
 const LOGIN_URL =  HOST + 'api/auth/login';
 
 const Login = () => {
-  const { setAuth } = useAuth();
 
   const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
 
   const userRef = useRef();
   const errRef = useRef();
