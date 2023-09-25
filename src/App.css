@@ -1070,6 +1070,13 @@ textarea {
   min-height: 100vh;
 }
 
+.register-success{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .register-section {
   background-color: rgba(0, 0, 0, 0.4);
   width: 70%;
