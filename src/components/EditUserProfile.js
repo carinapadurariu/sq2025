@@ -13,7 +13,7 @@ const EditUserProfile = () => {
         phoneNumber: '',
     });
     const [passwordData, setPasswordData] = useState({
-        currentPassword: '',
+        oldPassword: '',
         newPassword: '',
         confirmPassword: '',
     });
@@ -116,14 +116,14 @@ const EditUserProfile = () => {
     const handleProfileChange = (e) => {
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value,
+            [e.target.id]: e.target.value,
         });
     };
 
     const handlePasswordChange = (e) => {
         setPasswordData({
             ...passwordData,
-            [e.target.name]: e.target.value,
+            [e.target.id]: e.target.value,
         });
     };
 
@@ -132,7 +132,7 @@ const EditUserProfile = () => {
             <button className="delete-button" onClick={handleDeleteAccount}>
                 Delete Account
             </button>
-            <form className="edit-user-profile-form">
+            <form className="edit-user-profile-form" onSubmit={handleProfileSubmit}>
                 <div className="edit-user-form-group">
                     <h2>Edit Profile</h2>
                     <div className='edit-user-input'>
@@ -189,7 +189,7 @@ const EditUserProfile = () => {
                         <br/>
                         <input
                             type="password"
-                            id="currentPassword"
+                            id="oldPassword"
                             onChange={handlePasswordChange}
                             className='edit-password-input'
                         />
