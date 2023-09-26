@@ -129,89 +129,103 @@ const EditUserProfile = () => {
 
     return (
         <div className="edit-user-profile-container">
-
-            <div className="edit-profile-column">
-                <form className="edit-user-profile-form" onSubmit={handleProfileSubmit}>
+            <button className="delete-button" onClick={handleDeleteAccount}>
+                Delete Account
+            </button>
+            <form className="edit-user-profile-form">
+                <div className="edit-user-form-group">
                     <h2>Edit Profile</h2>
-                    <div className="form-group">
-                        <label>Email:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder={formData.email}
-                            onChange={handleProfileChange}
-                            className=''
-                        />
+                    <div className='edit-user-input'>
+                        <div className='edit-user-input-group'>
+                            <label>Email:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder={formData.email}
+                                onChange={handleProfileChange}
+                                className='edit-user-input'
+                            />
+                        </div>
+                        <div className='edit-user-input-group'>
+                            <label>First Name:</label>
+                            <input
+                                type="text"
+                                id="firstName"
+                                placeholder={formData.firstName}
+                                onChange={handleProfileChange}
+                                className='edit-user-input'
+                            />
+                        </div>
+                        <div className='edit-user-input-group'>
+                            <label>Last Name:</label>
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder={formData.lastName}
+                                onChange={handleProfileChange}
+                                className='edit-user-input'
+                            />
+                        </div>
+                        <div className='edit-user-input-group'>
+                            <label>Phone Number:</label>
+                            <input
+                                type="text"
+                                id="phoneNumber"
+                                placeholder={formData.phoneNumber}
+                                onChange={handleProfileChange}
+                                className='edit-user-input'
+                            />
+                        </div>
                     </div>
-                    <div className="form-group">
-                        <label>First Name:</label>
-                        <input
-                            type="text"
-                            id="firstName"
-                            placeholder={formData.firstName}
-                            onChange={handleProfileChange}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Last Name:</label>
-                        <input
-                            type="text"
-                            id="lastName"
-                            placeholder={formData.lastName}
-                            onChange={handleProfileChange}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Phone Number:</label>
-                        <input
-                            type="text"
-                            id="phoneNumber"
-                            placeholder={formData.phoneNumber}
-                            onChange={handleProfileChange}
-                        />
-                    </div>
+                    <br/>
                     <button className='edit-profile-submit' type="submit">Save Changes</button>
-                </form>
-            </div>
-            <div className="edit-password-column">
-                <form className="edit-password-form" onSubmit={handlePasswordSubmit}>
-                    <h2>Change Password</h2>
-                    <div className="form-group">
+                </div>
+            </form>
+            <form className="edit-password-form" onSubmit={handlePasswordSubmit}>
+                <h2>Change Password</h2>
+                <div className="edit-password-form-group">
+                    <div className='edit-user-input-group'>
                         <label>Current Password:</label>
+                        <br/>
                         <input
                             type="password"
                             id="currentPassword"
                             onChange={handlePasswordChange}
+                            className='edit-password-input'
                         />
                     </div>
-                    <div className="form-group">
+                    <div className='edit-user-input-group'>
+
                         <label>New Password:</label>
+                        <br/>
                         <input
                             type="password"
                             id="newPassword"
                             onChange={handlePasswordChange}
+                            className='edit-password-input'
+
                         />
                     </div>
-                    <div className="form-group">
+                    <div className='edit-user-input-group'>
                         <label>Confirm Password:</label>
+                        <br/>
                         <input
                             type="password"
                             id="confirmPassword"
                             onChange={handlePasswordChange}
+                            className='edit-password-input'
                         />
                     </div>
-                    <div>
-                        <button className='edit-password-submit' type="submit">Change Password</button>
-                    </div>
-                    <br/>
-                    <br/>
-                    <button className="delete-button" onClick={handleDeleteAccount}>
-                        Delete Account
-                    </button>
-                </form>
-            </div>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <button className='edit-password-submit' type="submit">Change Password</button>
+                <br/>
+                <br/>
+            </form>
         </div>
     );
-};
+}
 
 export default EditUserProfile;
