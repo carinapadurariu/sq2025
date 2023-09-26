@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 import Admin from "./components/Admin";
 import UserPage from "./components/UserPage";
 import EditUserProfile from "./components/EditUserProfile.js"
-
+import { MyNavBar } from "./components/NavBar";
 
 function App() {
 
@@ -16,14 +16,15 @@ function App() {
         <Router>
             {/* Wrap your entire app with the Router component */}
             <div className="App">
+                <MyNavBar />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />}/>
-                    <Route path="/admin" element={<Admin />}/>
-                    <Route path="/userpage" element={<UserPage/>}/>
-                    <Route path="/edituserprofile" element={<EditUserProfile/>}/>
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/admin" element={<Admin />} />
+                    <Route path="/userpage" element={<UserPage />} />
+                    <Route path="/edituserprofile" element={<EditUserProfile />} />
                 </Routes>
             </div>
         </Router>

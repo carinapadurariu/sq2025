@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import { faShieldHalved } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -10,13 +10,13 @@ const AdminLink = () => {
         isAdmin = roles.includes('ROLE_ADMIN');
     }
     else {
-         isAdmin = false;
+        isAdmin = false;
     }
 
     return isAdmin ? (
-        <Nav.Link exact="true" activeclassname="active" className="admin-link" to="/admin">
-                            <FontAwesomeIcon icon={faShieldHalved } color="#4d4d4e" />
-                        </Nav.Link>
+        <NavLink to='/admin' activeStyle>
+            <FontAwesomeIcon icon={faShieldHalved} color="#4d4d4e" />
+        </NavLink>
     ) : null;
 };
 
