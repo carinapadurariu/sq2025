@@ -11,7 +11,6 @@ import i18n from 'i18next';
 
 export const MyNavBar = (props) => {
 
-    const [selectedLanguage, setSelectedLanguage] = useState('');
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
     const navigate = useNavigate();
@@ -38,10 +37,6 @@ export const MyNavBar = (props) => {
         console.log('connect');
         navigate('/login');
     };
-
-    const handleLanguageClick = (language) => {
-        setSelectedLanguage(language);
-      };
 
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled":""}>
