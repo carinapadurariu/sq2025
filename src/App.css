@@ -94,11 +94,11 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
-  width: 20%; /* Ajustați lățimea după nevoie */
-  height: auto; /* Pentru a menține raportul de aspect */
-  padding: 10px; /* Adăugați umplere pentru cadru */
-  border: 2px solid white; /* Adăugați o margine în jurul logo-ului */
-  border-radius: 10px; /* Adăugați raza marginii pentru un cadru rotunjit */
+  width: 20%; 
+  height: auto; 
+  padding: 10px; 
+  border: 2px solid white; 
+  border-radius: 10px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,16 +382,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 .intro-about {
-  font-family: Arial, sans-serif; /* Setarea fontului */
-  font-size: 18px; /* Dimensiunea textului */
-  line-height: 1.5; /* Înălțimea liniei pentru o lizibilitate mai bună */
-  color: #fff; /* Culoarea textului */
+  font-family: Arial, sans-serif;
+  font-size: 18px; 
+  line-height: 1.5; 
+  color: #fff; 
   margin-top: 65px;
 }
 
 .intro-title {
-  font-weight: bold; /* Ingroasa scrisul pentru titlu */
-  color: #cfcdab; /* Culoarea titlului */
+  font-weight: bold;
+  color: #cfcdab; 
 }
 
 
@@ -415,10 +415,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .custom-list li {
   margin-bottom: 10px;
-  background-image: url('./assets/img/car-icon1.png'); /* Calea către imagine */
-  background-size: 25px 20px; /* Dimensiunile imaginii */
-  background-repeat: no-repeat; /* Opriți repetarea imaginii */
-  background-position: left center; /* Poziția imaginii în stânga */
+  background-image: url('./assets/img/car-icon1.png'); 
+  background-size: 25px 20px; 
+  background-repeat: no-repeat; 
+  background-position: left center; 
   padding-left: 25px; 
 }
 
@@ -427,24 +427,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 .right-align {
-  text-align: right; /* Alinează elementele la dreapta */
-  float: right; /* Permite elementelor să fie pe aceeași linie și să fie aliniate la dreapta */
-  clear: right; /* Asigură ca elementele din stânga să nu se suprapună pe cele din dreapta */
-  width: 50%; /* Lățimea pentru elementele din dreapta (50% pentru a le face să se încadreze pe aceeași linie) */
+  text-align: right; 
+  float: right; 
+  clear: right;
+  width: 50%; 
 }
 
 .container-about {
-  border: 2px solid #b08e5f; /* Borda containerului */
+  border: 2px solid #b08e5f; 
   border-radius:44px;
-  padding: 45px; /* Spațierea interioară a containerului */
-  margin: 20px 20px; /* Margini exterioare pentru separare */
-  background-color: #33321c /* Culoarea de fundal a containerului */
+  padding: 45px;
+  margin: 20px 20px;
+  background-color: #33321c;
 }
 
 
 
 .footer {
-
+margin-top: 2%;
   background-image: url('./assets/img/bricks.png');
  
 }
@@ -538,31 +538,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   
 }
 
-/* .container-contact-page{
-  margin-top: 10%;
-  background-color: rgb(181, 167, 88) ;
-  padding: 20px;
-  /* margin: 20px; */
-  /* border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10%;
-} */
-
-/* .container-contact-page h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
-} */ */
-
-/* .container-contact-page p {
-  font-size: 16px;
-  margin-bottom: 15px;
-} */
-
-/* .span-email-color {
-  color: #007bff; /* sau orice altă culoare dorită */
-
-
-
 .container-about-page {
   display: flex;
   justify-content: center;
@@ -572,7 +547,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .container-contact-page{
 .text-zone {
-  /* position: absolute; */
   left: 10%;
   top: 50%;
   transform: translateY(-50%);
@@ -806,7 +780,7 @@ position: absolute;
 
 .contact {
   background: linear-gradient(90.21deg, #2e2a2d -5.91%, #d0c20b 111.58%);
-  padding: 60px 0 400px 0;
+  padding: 60px 0 130px 0;
   margin-top: 8%;
 }
 .contact img {
@@ -1006,3 +980,171 @@ position: absolute;
     border-radius: 20px;
     animation: 2s;
 }
+
+
+
+.video-car{
+  opacity: 30%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+.carProfile{
+  margin-top: 150px;
+  padding: 0px 30px;
+
+}
+
+.single-card {
+  background-color: orange; 
+  padding: 20px;
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  border-radius: 5px;
+}
+
+.single-card:nth-child(1){
+  background: #ddb517;
+}
+
+.single-card:nth-child(2){
+  background: #d2981c;
+}
+
+.single-card:nth-child(3){
+  background: #e07e17;
+}
+
+.single-card:nth-child(4){
+  background: #dc6815;
+}
+
+.card-content h4 {
+  font-size: 24px; 
+  color: rgb(0, 0, 0); 
+  margin-bottom: 10px; 
+}
+
+.card-content span {
+  font-size: 18px; 
+  color: rgb(0, 0, 0); 
+}
+
+.card-icon {
+  font-size: 2rem;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.845);
+  float: right; 
+  margin-left: 10px;
+  margin-top: -8%;
+}
+
+.car-cards{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  column-gap: 2rem;
+}
+
+
+.statics{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stats{
+  background: #796430;
+  padding: 30px;
+  border-radius: 5px;
+  height: 320px;
+  padding-bottom: 50px;
+  opacity: 60%;
+
+}
+
+.tooltip-style{
+  background: #dd0031 !important ;
+  color: #fff;
+}
+
+
+.stats-title{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.recommend-car-card{
+  padding: 57px;
+  border-radius: 5px;
+  background: #c1951c;
+  opacity: 70%;
+  width: 31%;
+  margin-top: 25px;
+}
+
+.recommend-car-top h5{
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  color: #afb2ae;
+
+}
+
+.recommend-car-top h5 span i{
+  font-size: 1.2rem;
+
+}
+
+.recommend-car-top h4{
+  font-size: 1.3rem;
+  margin: 20px 0px;
+
+}
+
+.recommended-car-other{
+  display: flex;
+  align-items: center;
+  justify-content:space-between ;
+}
+
+.recommend-icons{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.recommend-icons p:nth-child(1){
+  display: flex;
+  align-items: center;
+}
+
+.recommend-car-wrapper{
+  display: grid;
+}
+
+.btn-design{
+  background-color: #8e6d14 !important;
+  /* display: flex;
+  flex-direction: row; */
+
+  
+}
+
+.dropdown-autoclose-inside {
+  background-color: pink !important; /* Culoarea de fundal a butonului */
+  /* Culoarea marginii butonului (dacă este necesar) */
+}
+
+.harta-design{
+  margin-top: 150px;
+}
+

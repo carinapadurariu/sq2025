@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.png";
 import 'animate.css';
@@ -6,7 +6,6 @@ import TrackVisibility from 'react-on-screen';
 import Image from 'react-bootstrap/Image';
 import assistImg from '../assets/img/assistant.png'
 import mechImg from '../assets/img/mech.png'
-import { GoogleMap, Marker, LoadScript } from '@react-google-maps/api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCar,
@@ -16,9 +15,18 @@ import {
   faStreetView,
   faTruck,
 } from '@fortawesome/free-solid-svg-icons';
-import vidBack from '../assets/img/abstract.mp4'
+
 
 export const ContactMap = () => {
+
+  useEffect(() => {
+   
+    window.scrollTo(0, 0);
+
+ }
+ )
+
+
   const formInitialDetails = {
     firstName: '',
     lastName: '',
@@ -38,11 +46,12 @@ export const ContactMap = () => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
+        e.preventDefault();
+        setButtonText("Sending...");
+
+        let response = await fetch(" ", {
+          method: "POST",
+          headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(formDetails),
@@ -50,7 +59,7 @@ export const ContactMap = () => {
     setButtonText("Send");
     let result = await response.json();
     setFormDetails(formInitialDetails);
-    if (result.code == 200) {
+    if (result.code === 200) {
       setStatus({ succes: true, message: 'Message sent successfully'});
     } else {
       setStatus({ succes: false, message: 'Something went wrong, please try again later.'});

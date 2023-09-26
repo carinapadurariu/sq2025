@@ -74,11 +74,11 @@ export const MyNavBar = (props) => {
              }
              } 
              >
+             
               <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
             </Nav.Link>
-            <Nav.Link exact="true" activeclassname="active" className="map-link" to="/map">
-              <FontAwesomeIcon icon={faMap} color="#4d4d4e" />
-            </Nav.Link>
+
+
             <Nav.Link
              exact="true"
             activeclassname="active"
@@ -89,8 +89,25 @@ export const MyNavBar = (props) => {
                props.setPageState('car');
   }}
 >
-  <FontAwesomeIcon icon={faCar} color="#4d4d4e" />
+<FontAwesomeIcon icon={faCar} color="#4d4d4e" />
+            </Nav.Link>
+
+
+            
+            <Nav.Link exact="true"
+             activeclassname="active" 
+             className="harta-link" 
+             to="/harta"
+             onClick = {() => {
+              console.log('gotoharta')
+              props.setPageState('harta')
+             }
+             } 
+             >
+
+  <FontAwesomeIcon icon={faMap} color="#4d4d4e" />
 </Nav.Link>
+          
           </nav>
           <span className="navbar-text">
             <ul>
