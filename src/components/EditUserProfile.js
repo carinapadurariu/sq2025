@@ -228,4 +228,4 @@ const EditUserProfile = () => {
     );
 }
 
-    export default EditUserProfile;
+export default EditUserProfile;
