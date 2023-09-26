@@ -101,4 +101,3 @@ export const MyNavBar = (props) => {
     );
 
 }
-

@@ -6,6 +6,8 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Contact from "./components/Contact";
 import Admin from "./components/Admin";
+import UserPage from "./components/UserPage";
+import EditUserProfile from "./components/EditUserProfile.js"
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />}/>
                     <Route path="/admin" element={<Admin />}/>
+                    <Route path="/userpage" element={<UserPage/>}/>
+                    <Route path="/edituserprofile" element={<EditUserProfile/>}/>
                 </Routes>
             </div>
         </Router>
