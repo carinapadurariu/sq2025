@@ -54,7 +54,7 @@ const EditUserProfile = () => {
 
         if (authToken) {
             axios
-                .post(HOST+'profile/data', formData, {
+                .put(HOST+'profile/data', formData, {
                     headers: {
                         Authorization: `Bearer ${authToken}`,
                     },
@@ -97,7 +97,7 @@ const EditUserProfile = () => {
         const authToken = localStorage.getItem('token');
         if (authToken) {
             axios
-                .post('http://localhost:8080/profile/password', passwordData, {
+                .put(HOST+ 'profile/password', passwordData, {
                     headers: {
                         Authorization: `Bearer ${authToken}`,
                     },
