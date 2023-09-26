@@ -862,10 +862,11 @@ position: absolute;
 
 
 input[type='text'],
-input[type='email'] {
+input[type='email'],
+input[type = 'password']{
   width: 100%;
   border: 0;
-  /* background-color: #dbdbd8; */
+  background-color: #dbdbd8;
   height: 50px;
   font-size: 16px;
   color: #fff;
@@ -1240,50 +1241,69 @@ h2 {
 /* EditUserProfile.css */
 
 
-.edit-user-profile-container {
+.edit-user-profile-container{
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
 }
-
-.edit-profile-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  margin-right: 20px;
-}
-
-.edit-password-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
-}
-
-/* Set a fixed width for the input fields in both columns */
-.form-group input {
-  width: 100%;
-}
-
-
-.form-group input {
-  width: 100%; /* Make all input fields occupy the full width of their container */
+.edit-user-profile-form{
+  padding:20px;
+  text-align: center;
+  width: 700px;
+  text-align: center;
+  border-radius: 5px;
 }
 
 
 
 
-.edit-profile-submit
-{
-  background-color: blue;
-  color: white;
+.edit-password-form{
+  padding:20px;
+  text-align: center;
+  width: 700px;
+  text-align: center;
+  border-radius: 5px;
 }
 
-.edit-password-submit {
-  background-color: red;
-  color: white;
+
+
+.edit-profile-submit, .edit-password-submit{
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.delete-button {
-  color:red;
+.delete-button{
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 10px; /* Adjust the distance from the bottom as needed */
+  left: 50%;
+  transform: translateX(-50%);
+
+
+  cursor: pointer;
 }
+
+
+input[type="password"] {
+  color: black;
+}
+
+
+
+
+
