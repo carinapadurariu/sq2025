@@ -247,9 +247,20 @@ export function Harta() {
   }, [map, currentLocation, directionsService]);
 
   return (
-    <div className="harta-design">
-<div id="controls" style={{ zIndex: 1, position: 'absolute', top: 10, left: 10, background: 'white', padding: 10 }}>
-        <div>
+    <div className="App">
+      <div id="controls" 
+  style={{ 
+    zIndex: 1, 
+    position: 'absolute', 
+    top: 40, 
+    left: 10, 
+    background: 'white', 
+    padding: 20, 
+    borderRadius: '8px', 
+    boxShadow: '0px 2px 5px rgba(0,0,0,0.2)',
+    marginTop: '100px' }}> 
+       
+        <div style={{ marginBottom: 20 }}>
           <input
             type="range"
             min="1000"
@@ -257,23 +268,90 @@ export function Harta() {
             step="1000"
             value={searchRadius}
             onChange={(e) => setSearchRadius(e.target.value)}
+            style={{ width: '100%', marginBottom: '10px' }}
           />
-          <span>{searchRadius} meters</span>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'black' }}>
+            <span>Radius:</span>
+            <span>{searchRadius} meters</span>
+          </div>
         </div>
-        <input ref={searchInputRef} type="text" placeholder="Search for a location (gas station, car repair, itp)" />
-        <button onClick={() => toggleNearbyPlaces('gas_station')}>Toggle Gas Stations</button>
-        <button onClick={() => toggleNearbyPlaces('car_repair')}>Toggle Car Repair</button>
-        <button onClick={() => toggleNearbyPlaces('itp')}>Toggle ITP</button>
-        <div style={{ marginTop: 10 }}>
+  
+        <div style={{ marginBottom: 20 }}>
+          <input
+            ref={searchInputRef}
+            type="text"
+            placeholder="Search for a location (gas station, car repair, itp)"
+            style={{ padding: '12px', borderRadius: '8px', width: '100%' }}
+          />
+        </div>
+  
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px', marginBottom: 20 }}>
+          <button
+            onClick={() => toggleNearbyPlaces('gas_station')}
+            style={{
+              padding: '12px 15px',
+              borderRadius: '8px',
+              background: '#E6EFFF',
+              border: 'none',
+              boxShadow: '0px 2px 4px rgba(0,0,0,0.1)'
+            }}
+          >
+            Gas Stations
+          </button>
+          <button
+            onClick={() => toggleNearbyPlaces('car_repair')}
+            style={{
+              padding: '12px 15px',
+              borderRadius: '8px',
+              background: '#E6EFFF',
+              border: 'none',
+              boxShadow: '0px 2px 4px rgba(0,0,0,0.1)'
+            }}
+          >
+            Car Repair
+          </button>
+          <button
+            onClick={() => toggleNearbyPlaces('itp')}
+            style={{
+              padding: '12px 15px',
+              borderRadius: '8px',
+              background: '#E6EFFF',
+              border: 'none',
+              boxShadow: '0px 2px 4px rgba(0,0,0,0.1)'
+            }}
+          >
+            ITP
+          </button>
+        </div>
+  
+        <div>
           {routes.map((route, index) => (
-            <button key={index} onClick={() => showRoute(index)}>
+            <button
+              key={index}
+              onClick={() => showRoute(index)}
+              style={{
+                padding: '12px 15px',
+                borderRadius: '8px',
+                background: '#E6EFFF',
+                border: 'none',
+                boxShadow: '0px 2px 4px rgba(0,0,0,0.1)',
+                display: 'block',
+                width: '100%',
+                textAlign: 'left',
+                marginBottom: 15
+              }}
+            >
               Route {index + 1}: {route.summary} ({route.legs[0].duration.text}, {route.legs[0].distance.text})
             </button>
           ))}
         </div>
+  
       </div>
       <div ref={mapContainerRef} id="map" style={{ width: '100%', height: '80vh' }}></div>
     </div>
   );
+  
+  
 }
+
 
