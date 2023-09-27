@@ -8,12 +8,30 @@ export const Newsletter = ({ status, message, onValidated }) => {
     if (status === 'success') clearFields();
   }, [status])
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (email && email.indexOf("@") > -1) {
-      onValidated({
-        EMAIL: email
-      });
+      try {
+        const response = await fetch('https://team1-backend-jpdqtnohpq-uc.a.run.app/emails', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            EMAIL: email,
+          }),
+        });
+
+        if (response.status === 200) {
+          // Trimiterea a fost cu succes, poți face ceva cu răspunsul dacă este necesar
+          onValidated({ EMAIL: email });
+        } else {
+          // Trimiterea a eșuat, poți afișa un mesaj de eroare
+          console.error('Trimiterea a eșuat');
+        }
+      } catch (error) {
+        console.error('Eroare la trimitere:', error);
+      }
     }
   }
 

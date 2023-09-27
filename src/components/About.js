@@ -129,9 +129,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Flat Tire </Dropdown.Item>
-    <Dropdown.Item href="#">Uneven Tire Wear</Dropdown.Item>
-    <Dropdown.Item href="#">Bald Tires </Dropdown.Item>
+    <Dropdown.Item href="https://autochrome.ro/">Flat Tire </Dropdown.Item>
+    <Dropdown.Item href="https://autochrome.ro/">Uneven Tire Wear</Dropdown.Item>
+    <Dropdown.Item href="https://autochrome.ro/">Bald Tires </Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
@@ -141,9 +141,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Overheating </Dropdown.Item>
-    <Dropdown.Item href="#">Engine Misfire </Dropdown.Item>
-    <Dropdown.Item href="#">Oil Leaks </Dropdown.Item>
+    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">Overheating </Dropdown.Item>
+    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">Engine Misfire </Dropdown.Item>
+    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">Oil Leaks </Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
@@ -153,9 +153,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Dead Battery</Dropdown.Item>
-    <Dropdown.Item href="#">Faulty Alternator</Dropdown.Item>
-    <Dropdown.Item href="#">Starter Motor Issues</Dropdown.Item>
+    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">Dead Battery</Dropdown.Item>
+    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">Faulty Alternator</Dropdown.Item>
+    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">Starter Motor Issues</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
@@ -165,9 +165,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Catalytic Converter Failure:</Dropdown.Item>
-    <Dropdown.Item href="#">Exhaust Gas Recirculation </Dropdown.Item>
-    <Dropdown.Item href="#">Air Injection System Malfunction</Dropdown.Item>
+    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">Catalytic Converter Failure:</Dropdown.Item>
+    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">Exhaust Gas Recirculation </Dropdown.Item>
+    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">Air Injection System Malfunction</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
@@ -177,9 +177,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Slipping Transmission</Dropdown.Item>
-    <Dropdown.Item href="#">Delayed or Rough Shifting</Dropdown.Item>
-    <Dropdown.Item href="#">Burning Smell</Dropdown.Item>
+    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">Slipping Transmission</Dropdown.Item>
+    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">Delayed or Rough Shifting</Dropdown.Item>
+    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">Burning Smell</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
@@ -189,9 +189,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Spongy or Soft Brake Pedal</Dropdown.Item>
-    <Dropdown.Item href="#">Brake Warning Light</Dropdown.Item>
-    <Dropdown.Item href="#">Reduced Braking Power</Dropdown.Item>
+    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">Spongy or Soft Brake Pedal</Dropdown.Item>
+    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">Brake Warning Light</Dropdown.Item>
+    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">Reduced Braking Power</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
     </div>

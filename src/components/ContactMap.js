@@ -49,7 +49,7 @@ export const ContactMap = () => {
         e.preventDefault();
         setButtonText("Sending...");
 
-        let response = await fetch(" ", {
+        let response = await fetch(" http://localhost:8080/emails", {
           method: "POST",
           headers: {
         "Content-Type": "application/json;charset=utf-8",
