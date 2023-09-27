@@ -39,9 +39,8 @@ const Login = () => {
       console.log(accessToken);
       const roles = response?.data?.roles;
       localStorage.setItem('token', accessToken);
-
+      localStorage.setItem('roles', roles);
       navigate('/userpage');
-
 
 
     } catch (err) {
