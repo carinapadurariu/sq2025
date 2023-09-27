@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import Contact from "./components/Contact";
+import {Contact} from "./components/Contact";
 import Admin from "./components/Admin";
 import UserPage from "./components/UserPage";
 import EditUserProfile from "./components/EditUserProfile.js"

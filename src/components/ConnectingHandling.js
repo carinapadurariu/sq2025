@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import axios from "axios";
 import { HOST } from "./constants";
 
 const ConnectingHandling = () => {
