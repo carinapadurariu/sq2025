@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import {Contact} from "./components/Contact";
 import UserPage from "./components/UserPage";
 import EditUserProfile from "./components/EditUserProfile.js"
+import {CarMap} from "./components/CarMap"
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/register" element={<Register />}/>
                     <Route path="/userpage" element={<UserPage/>}/>
                     <Route path="/edituserprofile" element={<EditUserProfile/>}/>
+                    <Route path="/carmap" element={<CarMap/>}/>
                 </Routes>
             </div>
         </Router>
