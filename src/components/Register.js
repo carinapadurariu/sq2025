@@ -100,7 +100,6 @@ const Register = () => {
                     phoneNumber:phoneNumber, email:email, username: username, password: password}),
                 {
                     headers: { 'Content-Type': 'application/json' }
-                    //withCredentials: true
                 }
             );
             // TODO: remove console.logs before deployment
@@ -130,11 +129,8 @@ const Register = () => {
     return (
         <>
             {success ? (
-                <section>
-                    <h1>Success!</h1>
-                    <p>
-                        <a href="/login">Sign In</a>
-                    </p>
+                <section className='register-success'>
+                    <h1>Success! You can now return to the <a href="/login">login page</a></h1>
                 </section>
             ) : (
                 <body className="register-body">

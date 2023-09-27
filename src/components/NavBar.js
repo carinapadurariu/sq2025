@@ -6,7 +6,8 @@ import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import i18n from 'i18next';
 
 import AdminLink from './AdminLink';
 import ConnectingHandling from './ConnectingHandling';
@@ -33,6 +34,11 @@ export const MyNavBar = (props) => {
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
     }
+    
+    const handleCarMapClick = () => {
+        console.log('connect');
+        navigate('/carmap');
+    };
 
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -82,12 +88,14 @@ export const MyNavBar = (props) => {
                                 <a target="_blank"
                                     rel="noreferrer"
                                     href="https://www.instagram.com/">
-
                                     <FontAwesomeIcon icon={faInstagram} color="#4d4d4e" />
                                 </a>
                             </li>
                         </ul>
                         <ConnectingHandling />
+                        <button onClick={() => i18n.changeLanguage('en')}>EN</button>
+                        <button onClick={() => i18n.changeLanguage('ro')}>RO</button>
+                        <button onClick={handleCarMapClick}>CarMap</button>
                     </span>
                 </Navbar.Collapse>
             </Container>
