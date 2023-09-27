@@ -37,6 +37,11 @@ export const MyNavBar = (props) => {
         console.log('connect');
         navigate('/login');
     };
+    
+    const handleCarMapClick = () => {
+        console.log('connect');
+        navigate('/carmap');
+    };
 
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled":""}>
@@ -95,6 +100,7 @@ export const MyNavBar = (props) => {
             </button>
             <button onClick={() => i18n.changeLanguage('en')}>EN</button>
             <button onClick={() => i18n.changeLanguage('ro')}>RO</button>
+            <button onClick={handleCarMapClick}>CarMap</button>
           </span>
                 </Navbar.Collapse>
             </Container>
