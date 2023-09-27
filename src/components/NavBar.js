@@ -52,13 +52,13 @@ export const MyNavBar = (props) => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <nav className="nav-bar-icons">
                             <NavLink exact="true" activeclassname="active" to="/">
-                                <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+                                <FontAwesomeIcon icon={faHome} color="#4d4d4e" style={{marginRight: '10px' }}/>
                             </NavLink>
                             <NavLink to='/userpage' activeStyle>
-                                <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+                                <FontAwesomeIcon icon={faUser} color="#4d4d4e" style={{marginRight: '10px' }}/>
                             </NavLink>
                             <NavLink to='/contact' activeStyle>
-                                <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+                                <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" style={{marginRight: '10px' }}/>
                             </NavLink>
                             <NavLink to='/map' activeStyle>
                                 <FontAwesomeIcon icon={faMap} color="#4d4d4e" />

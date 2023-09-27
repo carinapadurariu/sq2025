@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import {HOST} from "./constants";
+import {HOST} from './constants'
+const DATA_URL = HOST + 'profile';
 
 const UserProfile = () => {
     const [user, setUser] = useState({});
@@ -19,7 +20,7 @@ const UserProfile = () => {
         }
 
         axios
-            .get(HOST + 'profile', {
+            .get(DATA_URL, {
                 headers: {
                     Authorization: `Bearer ${authToken}`,
                 },
@@ -41,24 +42,27 @@ const UserProfile = () => {
     return (
         <div className="user-profile-container">
             <form className="userPage-form">
-                <h2>User Profile</h2>
+                <h2 style={{ fontSize: '25px', color:"yellow" }}><u>User Profile</u></h2>
                 <p className="profile-username">
-                    <strong>Username:</strong> {user.username}
+                    <p>
+                        <strong>Username:</strong> <span style={{ color: 'magenta' }}>{user.username}</span>
+                    </p>
+
                 </p>
                 <p>
-                    <strong>Email:</strong> {user.email}
+                    <strong>Email:</strong> <span style={{ color: 'magenta' }}>{user.email}</span>
                 </p>
                 <p>
-                    <strong>First Name:</strong> {user.firstName}
+                    <strong>First Name:</strong> <span style={{ color: 'magenta' }}>{user.firstName}</span>
                 </p>
                 <p>
-                    <strong>Last Name:</strong> {user.lastName}
+                    <strong>Last Name:</strong> <span style={{ color: 'magenta' }}>{user.lastName}</span>
                 </p>
                 <p>
-                    <strong>Phone:</strong> {user.phoneNumber}
+                    <strong>Phone:</strong> <span style={{ color: 'magenta' }}>{user.phoneNumber}</span>
                 </p>
                 <p>
-                    <strong>Role:</strong> {user.roles}
+                    <strong>Role:</strong> <span style={{ color: 'magenta' }}>{user.roles}</span>
                 </p>
                 <Link className="userPage-editProfileButton" to="/edituserprofile">
                     Edit Profile
