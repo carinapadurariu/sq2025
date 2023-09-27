@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome,faUser } from '@fortawesome/free-solid-svg-icons';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
 import {useNavigate} from "react-router-dom";
+import i18n from 'i18next';
 
 
 export const MyNavBar = (props) => {
@@ -92,6 +93,8 @@ export const MyNavBar = (props) => {
             <button className="vvd" onClick={handleConnectClick}>
               <span>Let's Connect</span>
             </button>
+            <button onClick={() => i18n.changeLanguage('en')}>EN</button>
+            <button onClick={() => i18n.changeLanguage('ro')}>RO</button>
           </span>
                 </Navbar.Collapse>
             </Container>

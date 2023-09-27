@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { useTranslation } from 'react-i18next';
 
 
 export const Banner = () => {
@@ -14,6 +15,7 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = [ "Like The Journey Matters.", "And Create Memories", "To The Future" ];
   const period = 200;
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -56,7 +58,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to Our Page</span>
+                <span className="tagline">{t("HomeScreen.welcome")}</span>
                 <h1>{`Hi! Let's Start Travelling`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                   <button  className="secondary-connect-button" onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
