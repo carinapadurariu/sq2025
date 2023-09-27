@@ -1,7 +1,14 @@
 {
-    "HomeScreen": {
+    "Banner": {
         "welcome": "Welcome to Our Page",
-        "salute": "Hi! Let's Start Travelling",
-        "description": "This is a simple application where you can search for car services, itps stations or gas stations in your area. You can also search for a specific location and get directions to it."
+        "salute": "Hi! Let's Start Travelling ",
+        "rotation_1": "Like The Journey Matters",
+        "rotation_2": "And Create Memories",
+        "rotation_3": "To The Future",
+        "description": "This is a simple application where you can search for car services, itps stations or gas stations in your area. You can also search for a specific location and get directions to it.",
+        "login": "Let's Connect"
+    },
+    "About":{
+        "":""
     }
 }

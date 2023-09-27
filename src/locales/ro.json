@@ -1,7 +1,11 @@
 {
-    "HomeScreen": {
+    "Banner": {
         "welcome": "Bine ai venit pe pagina noastră!",
-        "salute": "Salut! Hai să pornim in călătorie!",
-        "description": "Aceasta e o simpla aplicatie unde poti sa cauti service-uri auto, statii itp sau statii de carburant. Poti sa cauti chiar si o locatie specifica si sa primesti directii spre acea locatie."
+        "salute": "Salut! Hai să pornim in călătorie ",
+        "rotation_1": "Ca Și Când Ar Conta Traseul",
+        "rotation_2": "Și Să Creăm Amintiri",
+        "rotation_3": "Spre Viitor",
+        "description": "Aceasta e o simpla aplicatie unde poti sa cauti service-uri auto, statii itp sau statii de carburant. Poti sa cauti chiar si o locatie specifica si sa primesti directii spre acea locatie.",
+        "login": "Loghează-te"
     }
 }
