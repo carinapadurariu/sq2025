@@ -7,13 +7,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";
+
 import AdminLink from './AdminLink';
+import ConnectingHandling from './ConnectingHandling';
 
 export const MyNavBar = (props) => {
 
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
-    const navigate = useNavigate();
 
     useEffect(() => {
         const onScroll = () => {
@@ -32,11 +33,6 @@ export const MyNavBar = (props) => {
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
     }
-
-    const handleConnectClick = () => {
-        console.log('connect');
-        navigate('/login');
-    };
 
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -91,9 +87,7 @@ export const MyNavBar = (props) => {
                                 </a>
                             </li>
                         </ul>
-                        <button className="vvd" onClick={handleConnectClick}>
-                            <span>Let's Connect</span>
-                        </button>
+                        <ConnectingHandling />
                     </span>
                 </Navbar.Collapse>
             </Container>
