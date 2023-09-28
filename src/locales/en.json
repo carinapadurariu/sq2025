@@ -1,0 +1,200 @@
+{
+    "Banner": {
+        "welcome": "Welcome to Our Page",
+        "salute": "Hi! Let's Start Travelling ",
+        "rotation_1": "Like The Journey Matters",
+        "rotation_2": "And Create Memories",
+        "rotation_3": "To The Future",
+        "description": "This is a simple application where you can search for car services, itps stations or gas stations in your area. You can also search for a specific location and get directions to it.",
+        "login": "Let's Connect"
+    },
+    "About":{
+        "section_text_p1":"Get To Know More",
+        "about-info-text":"Reliable Auto Services In Your Ways",
+        "color-paragraph":"At NitroServices, we care about your car!",
+        "safety-message":"Travel safely and confidently when you choose our high-quality services for your car's care.",
+        "left-column-1":"Auto Body Repair and Painting",
+        "left-column-2":"Auto Mechanics",
+        "left-column-3":"Computerized Auto Diagnostics",
+        "left-column-4":"Auto Electrical",
+        "left-column-5":"Wheel Alignment",
+        "right-column-1":"Auto Air Conditioning",
+        "right-column-2":"Tire Vulcanizing",
+        "right-column-3":"Auto Consultation",
+        "right-column-4":"Spare Parts",
+        "right-column-5":"Auto Towing Services",
+        "service-description-1":"NITRO Services aims to set an example in the automotive service industry through the expertise and passion of its professionals and the quality of the services provided.",
+        "service-description-2":"It's very easy to get in touch with us and schedule an appointment at our service center. You can contact us for assistance whenever an issue arises with your car.",
+        "service-description-3":"We'll respond promptly and together, we'll determine the date and time for your visit to the service center.",
+        "service-features-1":"Quick appointment scheduling",
+        "service-features-2":"Guarantee for auto service labor and new parts",
+        "service-features-3":"Professionalism and honesty",
+        "service-features-4":"Competitive pricing",
+        "service-features-5":"Transparency and upfront costs",
+        "h3-text":"Which Problem Fits You The Best?",
+        "problem-1":"Electrical Problem",
+        "problem-2":"Emissions or Pollution Problems",
+        "problem-3":"Transmission Issues",
+        "problem-4":"Brake System Problems",
+        "check-engine-1":"Check Engine",
+        "check-engine-2":"Check engine light illuminated? Bring your vehicle to our service center for a thorough inspection.",
+        "check-engine-3":"Go Check The Car",
+        "electrical-problems-1":"Electrical Problems",
+        "electrical-problems-2":"Experiencing electrical issues? Schedule a service appointment to diagnose and resolve your car's problems.",
+        "electrical-problems-3":"Go Check The Car",
+        "emissions-problems-1":"Emissions & Poluution",
+        "emissions-problems-2":"Concerned about pollution and emissions? Visit our auto services for an eco-friendly and safe solution for your vehicle.",
+        "emissions-problems-3":"Go Check The Car",
+        "transmission-problems-1":"Transmission Issues",
+        "transmission-problems-2":"Want to experience a smooth driving? Entrust your car's transmission issues to our expert repair services today.",
+        "transmission-problems-3":"Go Check The Car",
+        "brake-system-problems-1":"Brake System Problems",
+        "brake-system-problems-2":"For brake system concerns, ensure your safety by scheduling a thorough inspection and maintenance with us.",
+        "brake-system-problems-3":"Go Check The Car"
+    },
+    "Admin":{
+        "title":"Admins Page"
+    },
+    "Contact":{
+        "title":"Contact Me",
+        "description":"This is a simple application where you can search for car services, itps stations or gas stations in your area. You can also search for a specific location and get directions to it.",
+        "name":"NitroServices",
+        "country":"Romania",
+        "address":"Str. Frunzisului 168",
+        "city":"Cluj-Napoca",
+        "email":"nitroservices@gmail.com",
+        "popup":"Main Point for Target"
+    },
+    "ContactMap":{
+        "title":"Contact Page",
+        "impressions":"Let Us Know Your Impressions",
+        "contact-details-title":"Contact",
+        "contact-details-address":"Calea Dorobantilor 18- 20, Cluj-Napoca",
+        "contact-details-phone":"Telefon: 0774.456.341 / 0746.873.981",
+        "contact-details-email":"Email: contact@serviceautocluj.ro",
+        "schedule-title":"Program",
+        "schedule-day-1":"Monday",
+        "schedule-day-2":"Tuesday",
+        "schedule-day-3":"Wednesday",
+        "schedule-day-4":"Thursday",
+        "schedule-day-5":"Friday",
+        "schedule-day-6":"Saturday",
+        "schedule-day-7":"Sunday",
+        "schedule-hour-1":"08:00 - 18:00",
+        "schedule-hour-2":"08:00 - 14:00",
+        "schedule-hour-3":"Closed"
+    },
+    "Editor":{
+        "title":"Editors Page",
+        "description":"You must have been assigned an Editor role.",
+        "home-button":"Home"
+    },
+    "Footer":{
+        "copyright":"Copyright 2022. All Rights Reserved"
+    },
+    "Home":{
+        "title":"Home",
+        "logged-in":"You are logged in!",
+        "link-1":"Go to Editor Page",
+        "link-2":"Go to Admin Page",
+        "link-3":"Go to Lounge",
+        "link-4":"Go to Link Page",
+        "sign-out":"Sign Out"
+    },
+    "LinkPage":{
+        "title":"Links",
+        "public-links":"Public",
+        "public-links-1":"Login",
+        "public-links-2":"Register",
+        "private-links":"Private",
+        "private-links-1":"Home",
+        "private-links-2":"Editors Page",
+        "private-links-3":"Admins Page"
+    },
+    "Login":{
+        "sign-in":"Sign In",
+        "username":"Username",
+        "password":"Password",
+        "register-button":"Need an account?",
+        "sign-up":"Sign Up"
+    },
+    "Lounge":{
+        "title":"The Lounge",
+        "description":"Admins and Editors can hang out here.",
+        "home-button":"Home"
+    },
+    "Missing":{
+        "title":"Oops!",
+        "description":"Page Not Found",
+        "home-button":"Visit Our Homepage"
+    },
+    "NavBar":{
+        "lets-connect":"Let's Connect",
+        "en-language":"EN",
+        "ro-language":"RO"
+    },
+    "Newsletter":{
+        "description-1":"Subscribe to our Newsletter",
+        "description-2":" & Never miss latest updates",
+        "sending":"Sending...",
+        "submit-button":"Submit" 
+    },
+    "Presentation":{
+        "title":"Over the Stations",
+        "description-1":"This is a simple application where you can search for car services, itps stations or gas stations in your area.",
+        "description-2":"You can also search for a specific location and get directions to it.",
+        "image-1":"Interpersonal Skills",
+        "image-2":"Quality",
+        "image-3":"Attention to Details",
+        "image-4":"Problem Solving"
+    },
+    "Register":{
+        "success-message":"Success!",
+        "sign-in":"Sign In",
+        "register-button":"Register",
+        "first-name":"First Name:",
+        "first-name-error-1":"At least 1 character.",
+        "first-name-error-2":"Must begin with a letter.",
+        "first-name-error-3":"Letters, spaces, apostrophes & hyphens allowed.",
+        "last-name":"Last Name:",
+        "last-name-error-1":"At least 1 character.",
+        "last-name-error-2":"Must begin with a letter.",
+        "last-name-error-3":"Letters, spaces, apostrophes & hyphens allowed.",
+        "phone-number":"Phone Number:",
+        "phone-number-error-1":"10 digits",
+        "email":"Email:",
+        "email-error-1":"Email must contain @.",
+        "username":"Username:",
+        "username-error-1":"4 to 24 characters.",
+        "username-error-2":"Must begin with a letter.",
+        "username-error-3":"Letters, numbers, underscores & hyphens allowed.",
+        "password":"Password:",
+        "password-error-1":"8 to 24 characters.",
+        "password-error-2":"Must contain at least 1 lowercase letter, 1 uppercase letter, 1 number & 1 special character.",
+        "password-error-3":"Allowed special characters: !@#$%^&",
+        "confirm-password":"Confirm Password:",
+        "confirm-password-error-1":"Passwords must match.",
+        "sign-up":"Sign Up",
+        "login":"Already registered?"
+    },
+    "Unauthorized":{
+        "title":"Unauthorized",
+        "description":"You do not have access to the requested page.",
+        "home-button":"Go Back"
+    },
+    "UserPage":{
+        "loading-button":"Loading...",
+        "title":"User Profile",
+        "username":"Username:",
+        "email":"Email:",
+        "first-name":"First Name:",
+        "last-name":"Last Name:",
+        "phone-number":"Phone Number:",
+        "role":"Role:",
+        "edit-button":"Edit Profile"
+    },
+    "Users":{
+        "title":"Users List",
+        "not-found":"No users to display"
+    }
+}

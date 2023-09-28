@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { useTranslation } from 'react-i18next';
 
 
 export const Banner = () => {
@@ -12,8 +13,9 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Like The Journey Matters.", "And Create Memories", "To The Future" ];
   const period = 200;
+  const { t, i18n } = useTranslation();
+  const toRotate = [ t("Banner.rotation_1"), t("Banner.rotation_2"), t("Banner.rotation_3") ];
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -28,8 +30,7 @@ export const Banner = () => {
     let fullText = toRotate[i];
     let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
 
-    setText(updatedText);
-
+    setText(updatedText);    
     if (isDeleting) {
       setDelta(prevDelta => prevDelta / 1);
     }
@@ -56,10 +57,10 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to Our Page</span>
-                <h1>{`Hi! Let's Start Travelling`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Discover a new level of service that puts you in the driver's seat. Explore our wide range of automotive services, schedule appointments with ease, and stay informed every step of the way. We're not just servicing cars; we're servicing smiles.</p>
-                  {/* <button  className="secondary-connect-button" onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button> */}
+                <span className="tagline">{t("Banner.welcome")}</span>
+                <h1>{t("Banner.salute")} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>{t("Banner.description")}</p>
+                  <button  className="secondary-connect-button" onClick={() => console.log('connect')}>{t("Banner.login")} <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>

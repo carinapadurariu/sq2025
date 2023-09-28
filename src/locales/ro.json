@@ -1,0 +1,200 @@
+{
+    "Banner": {
+        "welcome": "Bine ai venit pe pagina noastră!",
+        "salute": "Salut! Hai să pornim in călătorie ",
+        "rotation_1": "Ca Și Când Ar Conta Traseul",
+        "rotation_2": "Și Să Creăm Amintiri",
+        "rotation_3": "Spre Viitor",
+        "description": "Aceasta e o simpla aplicatie unde poti sa cauti service-uri auto, statii itp sau statii de carburant. Poti sa cauti chiar si o locatie specifica si sa primesti directii spre acea locatie.",
+        "login": "Loghează-te"
+    },
+    "About":{
+        "section_text_p1":"Află mai multe despre noi",
+        "about-info-text":"Service-uri auto de încredere pe drumurile tale",
+        "color-paragraph":"La NitroServices ne pasă de mașina ta!",
+        "safety-message":"Călătorește sigur și convins când alegi serviciile noastre de o înaltă calitate pentru mașina ta.",
+        "left-column-1":"Reparații de Caroserie și Vopsire",
+        "left-column-2":"Mecanică Auto",
+        "left-column-3":"Diagnostice Computerizate Auto",
+        "left-column-4":"Auto Electrical",
+        "left-column-5":"Aliniament Roți",
+        "right-column-1":"Auto Air Conditioning",
+        "right-column-2":"Vulcanizare",
+        "right-column-3":"Consultare Auto",
+        "right-column-4":"Piese de Schimb Auto",
+        "right-column-5":"Servicii de Tractare",
+        "service-description-1":"NITROServices țintește să seteze un exemplu în industria de servicii auto prin expertiza și pasiunea profesioniștilor și calitatea serviciilor puse la dispoziție.",
+        "service-description-2":"Este foarte ușor să iei legătura cu noi și să ăți faci o programare la centrele noastre de service auto. Ne poți contacta pentru asistență ori de câte ori apare o problemă la mașina ta.",
+        "service-description-3":"Vom răspunde cu promtitudine și împreună vom stabili data și ora pentru vizita ta la centrul nostru.",
+        "service-features-1":"Programare rapidă",
+        "service-features-2":"Garanție pentru manoperă și piese",
+        "service-features-3":"Profesionalism și onestitate",
+        "service-features-4":"Prețuri competitive",
+        "service-features-5":"Consturi transparente și detaliate",
+        "h3-text":"Care dintre probleme ți se potrivește cel mai bine?",
+        "problem-1":"Probleme Electrice",
+        "problem-2":"Probleme de Emisii și Poluare",
+        "problem-3":"Probleme de Transmisie",
+        "problem-4":"Probleme la Sistemul de Frânare",
+        "check-engine-1":"Check Engine",
+        "check-engine-2":"S-a aprins becul de Check engine? Adu mașina la noi pentru o diagnoză și reparații profesionale.",
+        "check-engine-3":"Verifică Mașina",
+        "electrical-problems-1":"Probleme Electrice",
+        "electrical-problems-2":"Ai probleme electrice la mașină? Adu mașina la noi pentru o diagnoză și reparații profesionale.",
+        "electrical-problems-3":"Verifică Mașina",
+        "emissions-problems-1":"Probleme de Emisii și Poluare",
+        "emissions-problems-2":"Îngrijorat pentru emisiile și poluarea mașinii? Adu mașina la noi pentru o diagnoză și reparații profesionale.",
+        "emissions-problems-3":"Verifică Mașina",
+        "transmission-problems-1":"Probleme de Transmisie",
+        "transmission-problems-2":"Vrei să ai o experiență cât mai lină la volan? Vizitează unul dintre centrele noastre pentru o soluție sigură și ecologică pentru mașină",
+        "transmission-problems-3":"Verifică Mașina",
+        "brake-system-problems-1":"Probleme la Sistemul de Frânare",
+        "brake-system-problems-2":"Pentru probleme cu sistemul de frânare, asigură-ți siguranța și a celor din jur și vizitează unul dintre centrele noastre pentru o inspecție și reparații profesionale.",
+        "brake-system-problems-3":"Verifică Mașina"
+    },
+    "Admin":{
+        "title":"Pagina de administrare"
+    },
+    "Contact":{
+        "title":"Contactează-ne",
+        "description":"Aceasta e o simpla aplicatie unde poti sa cauti service-uri auto, statii itp sau statii de carburant. Poti sa cauti chiar si o locatie specifica si sa primesti directii spre acea locatie.",
+        "name":"NitroServices",
+        "country":"Romania",
+        "address":"Str. Frunzisului 168",
+        "city":"Cluj-Napoca",
+        "email":"nitroservices@gmail.com",
+        "popup":"Principalul punct de interes"
+    },
+    "ContactMap":{
+        "title":"Pagina de contact",
+        "impressions":"Împărtășește impresiile tale",
+        "contact-details-title":"Contact",
+        "contact-details-address":"Calea Dorobantilor 18- 20, Cluj-Napoca",
+        "contact-details-phone":"Telefon: 0774.456.341 / 0746.873.981",
+        "contact-details-email":"Email: contact@serviceautocluj.ro",
+        "schedule-title":"Program",
+        "schedule-day-1":"Luni",
+        "schedule-day-2":"Marți",
+        "schedule-day-3":"Miercuri",
+        "schedule-day-4":"Joi",
+        "schedule-day-5":"Vineri",
+        "schedule-day-6":"Sâmbătă",
+        "schedule-day-7":"Duminică",
+        "schedule-hour-1":"08:00 - 18:00",
+        "schedule-hour-2":"08:00 - 14:00",
+        "schedule-hour-3":"Închis"
+    },
+    "Editor":{
+        "title":"Pagina editorilor",
+        "description":"Ai primit rolul de editor",
+        "home-button":"Pagina principală"
+    },
+    "Footer":{
+        "copyright":"Copyright 2022. All Rights Reserved"
+    },
+    "Home":{
+        "title":"Pagina principală",
+        "logged-in":"Te-ai logat cu succes!",
+        "link-1":"Către pagina editorilor",
+        "link-2":"Către pagina de administrare",
+        "link-3":"Către Lounge",
+        "link-4":"Către pagina de link-uri",
+        "sign-out":"Deconecteează-te"
+    },
+    "LinkPage":{
+        "title":"Links",
+        "public-links":"Public",
+        "public-links-1":"Login",
+        "public-links-2":"Register",
+        "private-links":"Private",
+        "private-links-1":"Pagina principală",
+        "private-links-2":"Pagina editorilor",
+        "private-links-3":"Pagina administratorilor"
+    },
+    "Login":{
+        "sign-in":"Loghează-te",
+        "username":"Username",
+        "password":"Parola",
+        "register-button":"Ai nevoie de un cont?",
+        "sign-up":"Înregistrează-te"
+    },
+    "Lounge":{
+        "title":"The Lounge",
+        "description":"Administratorii și editorii pot să vadă această pagină",
+        "home-button":"Pagina principală"
+    },
+    "Missing":{
+        "title":"Oops!",
+        "description":"Nu am găsit pagina pe care o cauți",
+        "home-button":"Vizitează pagina principală"
+    },
+    "NavBar":{
+        "lets-connect":"Conectează-te",
+        "en-language":"EN",
+        "ro-language":"RO"
+    },
+    "Newsletter":{
+        "description-1":"Abonează-te la newsletter-ul nostru",
+        "description-2":" & nu pierde nicio ofertă!",
+        "sending":"Se trimite...",
+        "submit-button":"Trimite" 
+    },
+    "Presentation":{
+        "title":"Trecem la stații",
+        "description-1":"Aceasta e o simpla aplicatie unde poti sa cauti service-uri auto, statii itp sau statii de carburant.",
+        "description-2":"Poti sa cauti chiar si o locatie specifica si sa primesti directii spre acea locatie.",
+        "image-1":"Aptitudini de comunicare",
+        "image-2":"Calitate",
+        "image-3":"Atenția la detalii",
+        "image-4":"Rezolvarea problemelor"
+    },
+    "Register":{
+        "success-message":"Succes!",
+        "sign-in":"Loghează-te",
+        "register-button":"Înregistrează-te",
+        "first-name":"Prenume:",
+        "first-name-error-1":"Cel puțin 1 caracter.",
+        "first-name-error-2":"Trebuie să înceapă cu o literă.",
+        "first-name-error-3":"Sunt permise litere, spații, apostrofuri și cratime.",
+        "last-name":"Nume de familie:",
+        "last-name-error-1":"Cel puțin 1 caracter.",
+        "last-name-error-2":"Trebuie să înceapă cu o literă.",
+        "last-name-error-3":"Sunt permise litere, spații, apostrofuri și cratime.",
+        "phone-number":"Număr de telefon:",
+        "phone-number-error-1":"10 cifre",
+        "email":"Email:",
+        "email-error-1":"Trebuie să fie un email valid.",
+        "username":"Username:",
+        "username-error-1":"4 până la 24 de caractere.",
+        "username-error-2":"Trebuie să înceapă cu o literă.",
+        "username-error-3":"Sunt permise litere, numere, puncte, cratime și underscore.",
+        "password":"Parola:",
+        "password-error-1":"8 până la 24 de caractere.",
+        "password-error-2":"Trebuie să conțină cel puțin o literă mică, o literă mare, un număr și un caracter special.",
+        "password-error-3":"Caractere speciale permise: !@#$%^&",
+        "confirm-password":"Confirmă parola:",
+        "confirm-password-error-1":"Parolele nu se potrivesc.",
+        "sign-up":"Înregistrează-te",
+        "login":"Deja ai un cont?"
+    },
+    "Unauthorized":{
+        "title":"Acces neautorizat",
+        "description":"Nu ai acces la această pagină",
+        "home-button":"Înapoi"
+    },
+    "UserPage":{
+        "loading-button":"Se încarcă...",
+        "title":"Profilul utilizatorului",
+        "username":"Username:",
+        "email":"Email:",
+        "first-name":"Prenume:",
+        "last-name":"Nume de familie:",
+        "phone-number":"Număr de telefon:",
+        "role":"Rol:",
+        "edit-button":"Modifică profilul"
+    },
+    "Users":{
+        "title":"Lista de utilizatori",
+        "not-found":"Niciun utilizator găsit"
+    }
+}
