@@ -247,7 +247,7 @@ export const CarMap=()=>{
   }, [map, currentLocation, directionsService]);
 
   return (
-    <div className="App">
+    <div className="CarMap" style={{marginTop:'150px'}}>
       <div id="controls" 
   style={{ 
     zIndex: 1, 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCar,
@@ -23,7 +23,18 @@ import transmImg from '../assets/img/transm.png'
 import brakeImg from '../assets/img/brake.png'
 import awardImg from '../assets/img/award.png'
 
+
+
+
 export const About = () => {
+
+   useEffect(() => {
+   
+      window.scrollTo(0, 0);
+  
+   }
+   )
+
   return (
     <>
       <div id="about" className="about-content">
@@ -118,9 +129,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="https://autochrome.ro/">Flat Tire </Dropdown.Item>
+    <Dropdown.Item href="https://autochrome.ro/">Uneven Tire Wear</Dropdown.Item>
+    <Dropdown.Item href="https://autochrome.ro/">Bald Tires </Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
@@ -130,9 +141,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">Overheating </Dropdown.Item>
+    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">Engine Misfire </Dropdown.Item>
+    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">Oil Leaks </Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
@@ -142,9 +153,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">Dead Battery</Dropdown.Item>
+    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">Faulty Alternator</Dropdown.Item>
+    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">Starter Motor Issues</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
@@ -154,9 +165,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">Catalytic Converter Failure:</Dropdown.Item>
+    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">Exhaust Gas Recirculation </Dropdown.Item>
+    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">Air Injection System Malfunction</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
@@ -166,9 +177,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">Slipping Transmission</Dropdown.Item>
+    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">Delayed or Rough Shifting</Dropdown.Item>
+    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">Burning Smell</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
@@ -178,9 +189,9 @@ export const About = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
-    <Dropdown.Item href="#">Menu Item</Dropdown.Item>
+    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">Spongy or Soft Brake Pedal</Dropdown.Item>
+    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">Brake Warning Light</Dropdown.Item>
+    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">Reduced Braking Power</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
     </div>
@@ -203,7 +214,7 @@ export const About = () => {
         Check engine light illuminated? 
         Bring your vehicle to our service center for a thorough inspection.
         </Card.Text>
-        <Button variant="primary">Go Check The Car</Button>
+        {/* <Button variant="primary" className="btn-design">Go Check The Car</Button> */}
       </Card.Body>
     </Card>
 
@@ -222,7 +233,7 @@ export const About = () => {
         Experiencing electrical issues?
         Schedule a service appointment to diagnose and resolve your car's problems.
         </Card.Text>
-        <Button variant="primary">Go Check The Car</Button>
+        {/* <Button variant="primary" className="btn-design">Go Check The Car</Button> */}
       </Card.Body>
     </Card>
 
@@ -239,7 +250,7 @@ export const About = () => {
         Concerned about pollution and emissions? 
         Visit our auto services for an eco-friendly and safe solution for your vehicle.
         </Card.Text>
-        <Button variant="primary">Go Check The Car</Button>
+        {/* <Button variant="primary" className="btn-design">Go Check The Car</Button> */}
       </Card.Body>
     </Card>
 
@@ -256,7 +267,7 @@ export const About = () => {
         Experience smooth driving?
         Entrust your car's transmission issues to our expert repair services today.
         </Card.Text>
-        <Button variant="primary">Go Check The Car</Button>
+        {/* <Button variant="primary" className="btn-design">Go Check The Car</Button> */}
       </Card.Body>
     </Card>
 
@@ -273,7 +284,7 @@ export const About = () => {
         For brake system concerns, ensure your safety by 
         scheduling a thorough inspection and maintenance with us.
         </Card.Text>
-        <Button variant="primary">Go Check The Car</Button>
+        {/* <Button variant="primary" className="btn-design">Go Check The Car</Button> */}
       </Card.Body>
     </Card>
 
