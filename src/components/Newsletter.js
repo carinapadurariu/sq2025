@@ -1,37 +1,48 @@
 import React, { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
+import axios from 'axios';
 
-export const Newsletter = ({ status, message, onValidated }) => {
+export const Newsletter = () => {
   const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     if (status === 'success') clearFields();
-  }, [status])
+  }, [status]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (email && email.indexOf("@") > -1) {
+      setStatus('sending');
       try {
-        const response = await fetch('https://team1-backend-jpdqtnohpq-uc.a.run.app/emails', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            EMAIL: email,
-          }),
-        });
+        const response = await axios.post('http://localhost:8080/notifications/email', { email });
 
         if (response.status === 200) {
-          // Trimiterea a fost cu succes, poți face ceva cu răspunsul dacă este necesar
-          onValidated({ EMAIL: email });
+          setStatus('success');
+          setMessage('Email saved successfully'); // Adjust based on actual backend response
         } else {
-          // Trimiterea a eșuat, poți afișa un mesaj de eroare
-          console.error('Trimiterea a eșuat');
+          setStatus('error');
+          setMessage('Something went wrong! Please try again later.');
         }
+
       } catch (error) {
-        console.error('Eroare la trimitere:', error);
+        setStatus('error');
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          setMessage(error.response.data.message); // Assuming error response has a message property
+        } else if (error.request) {
+          // The request was made but no response was received
+          setMessage('No response received from server. Please try again later.');
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          setMessage('Error in sending request. Please try again later.');
+        }
       }
+    } else {
+      setStatus('error');
+      setMessage('Please enter a valid email address.');
     }
   }
 
@@ -41,7 +52,7 @@ export const Newsletter = ({ status, message, onValidated }) => {
 
   return (
     <Col lg={12}>
-      <div className="newsletter-bx wow slideInUp">
+      <div className="newsletter-bx">
         <Row>
           <Col lg={12} md={6} xl={5}>
             <h3>Subscribe to our Newsletter<br></br> & Never miss latest updates</h3>
@@ -60,5 +71,6 @@ export const Newsletter = ({ status, message, onValidated }) => {
         </Row>
       </div>
     </Col>
-  )
+  );
 }
+
