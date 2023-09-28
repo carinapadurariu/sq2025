@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../assets/img/logo.png';
 import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCar, faEnvelope, faHome, faNewspaper, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
 import {useNavigate} from "react-router-dom";
 import i18n from 'i18next';
@@ -36,6 +36,7 @@ export const MyNavBar = (props) => {
     }
     
 
+
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
             <Container>
@@ -48,21 +49,28 @@ export const MyNavBar = (props) => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <nav className="nav-bar-icons">
                             <NavLink exact="true" activeclassname="active" to="/">
-                                <FontAwesomeIcon icon={faHome} color="#4d4d4e" style={{marginRight: '10px' }}/>
+                                <FontAwesomeIcon icon={faHome} color="#4d4d4e" style={{marginRight: '20px' }}/>
+                            </NavLink>
+                            <NavLink to='/about' activeStyle>
+                                <FontAwesomeIcon icon={faNewspaper} color="#4d4d4e" style={{marginRight: '20px' }}/>
+                            </NavLink>
+
+                            <NavLink to='/contactMap' activeStyle>
+                                <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" style={{marginRight: '20px' }}/>
+                            </NavLink>
+                            <NavLink to='/carProfile' activeStyle>
+                                <FontAwesomeIcon icon={faCar} color="#4d4d4e" style={{marginRight: '20px' }}/>
+                            </NavLink>
+                            
+                            <NavLink to='/carmap' activeStyle>
+                                <FontAwesomeIcon icon={faMap} color="#4d4d4e" style={{marginRight: '20px' }}/>
                             </NavLink>
                             <NavLink to='/userpage' activeStyle>
-                                <FontAwesomeIcon icon={faUser} color="#4d4d4e" style={{marginRight: '10px' }}/>
-                            </NavLink>
-                            <NavLink to='/contact' activeStyle>
-                                <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" style={{marginRight: '10px' }}/>
-                            </NavLink>
-                            <NavLink to='/carmap' activeStyle>
-                                <FontAwesomeIcon icon={faMap} color="#4d4d4e" />
+                                <FontAwesomeIcon icon={faUser} color="#4d4d4e" style={{marginRight: '20px' }}/>
                             </NavLink>
                             <AdminLink />
                     </nav>
                     <span className="navbar-text">
-
                         <ul>
                             <li>
                                 <a target="_blank"
