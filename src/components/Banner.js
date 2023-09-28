@@ -15,7 +15,7 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const period = 200;
   const { t, i18n } = useTranslation();
-  const toRotate = [ "Like The Journey Matters", "And Create Memories", "To The Future" ];
+  const toRotate = [ t("Banner.rotation_1"), t("Banner.rotation_2"), t("Banner.rotation_3") ];
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -30,8 +30,7 @@ export const Banner = () => {
     let fullText = toRotate[i];
     let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
 
-    setText(updatedText);
-
+    setText(updatedText);    
     if (isDeleting) {
       setDelta(prevDelta => prevDelta / 1);
     }

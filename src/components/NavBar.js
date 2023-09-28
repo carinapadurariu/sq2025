@@ -35,10 +35,6 @@ export const MyNavBar = (props) => {
         setActiveLink(value);
     }
     
-    const handleCarMapClick = () => {
-        console.log('connect');
-        navigate('/carmap');
-    };
 
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -60,7 +56,7 @@ export const MyNavBar = (props) => {
                             <NavLink to='/contact' activeStyle>
                                 <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" style={{marginRight: '10px' }}/>
                             </NavLink>
-                            <NavLink to='/map' activeStyle>
+                            <NavLink to='/carmap' activeStyle>
                                 <FontAwesomeIcon icon={faMap} color="#4d4d4e" />
                             </NavLink>
                             <AdminLink />
@@ -95,7 +91,6 @@ export const MyNavBar = (props) => {
                         <ConnectingHandling />
                         <button onClick={() => i18n.changeLanguage('en')}>EN</button>
                         <button onClick={() => i18n.changeLanguage('ro')}>RO</button>
-                        <button onClick={handleCarMapClick}>CarMap</button>
                     </span>
                 </Navbar.Collapse>
             </Container>
