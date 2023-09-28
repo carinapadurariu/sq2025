@@ -1,39 +1,72 @@
-import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
-import {HOST} from './constants'
+import { HOST } from './constants'
 import axios from 'axios';
+const ADMIN_URL = HOST + 'admin/users';
 
 const Admin = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get(`${HOST}admin/users`)
-            .then(response => setUsers(response.data))
-            .catch(error => console.log(error));
+
+        const authToken = localStorage.getItem('token');
+        if (!authToken) {
+            // Handle the case where the user is not authenticated.
+            // You can redirect the user to the login page or display an error message.
+            return;
+        }
+
+        axios.get(ADMIN_URL, {
+            headers: {
+                Authorization: `Bearer ${authToken}`
+            },
+        })
+            .then(response => {
+                setUsers(response.data)
+                console.log(response.data)
+                console.log(users)
+            })
+            .catch((error) => {
+                console.error('Error fetching user data:', error);
+            });
+            
     }, []);
 
     const handleDeleteUser = (user) => {
+        const authToken = localStorage.getItem('token');
         if (window.confirm('Are you sure you want to delete this user?')) {
-            axios.delete(`${HOST}admin/users/${user.username}`)
+            axios.delete(`${ADMIN_URL}/${user.username}`, {
+                headers: {
+                    Authorization: `Bearer ${authToken}`,
+                },
+            })
                 .then(() => setUsers(users.filter(u => u.username !== user.username)))
                 .catch(error => console.log(error));
         }
     };
 
     return (
-        <section>
-            <h1>Admins Page</h1>
-            <ul>
-                {users.map((user) => (
-                    <li key={user.username}>
-                        {user.name}
-                        <Link to = {`${HOST}admin/users/${user.username}/profile`}>View Profile</Link>
-                        <Link to = {`${HOST}admin/users/${user.username}/edit`}>Edit User</Link>
-                        <button onClick={() => handleDeleteUser(user)}>Delete User</button>
-                    </li>
+        <div className="admin-user-display">
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Phone</th>
+                    <th>Roles</th>
+                </tr>
+                {users && users.map((user, key) => (
+                    <tr key={key}>
+                        <td>{user.username}</td>
+                        <td>{user.email}</td>
+                        <td>{user.firstName}</td>
+                        <td>{user.lastName}</td>
+                        <td>{user.phoneNumber}</td>
+                        <td>{user.roles.join()}</td>
+                    </tr>
                 ))}
-            </ul>
-        </section>
+            </table>
+        </div>
     )
 }
 

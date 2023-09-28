@@ -1425,7 +1425,24 @@ input[type="password"] {
 }
 
 
+.admin-user-display{
+  font-family: sans-serif;
+  text-align: center;
+}
 
+table {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  width: 150px;
+  position: relative;
+  left: 100px;
+  top: 150px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
 
 /* *****UserPage****** */
 

@@ -6,7 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const AdminLink = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
-  const roles = localStorage.getItem('roles');
+  // Get the roles JSON string from localStorage.
+  const rolesJson = localStorage.getItem('roles');
+
+  // Convert the roles JSON string to an array.
+  const roles = JSON.parse(rolesJson);
+
+  // Use the roles array as needed.
+
 
   useEffect(() => {
     if (roles != null) {

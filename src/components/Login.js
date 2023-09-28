@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import useAuth from '../hooks/useAuth';
-import { Link, useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import {HOST} from './constants'
 import {useTranslation} from "react-i18next";
@@ -33,17 +33,24 @@ const Login = () => {
 
     try {
       const response = await axios.post(LOGIN_URL,
-          JSON.stringify({ username: username, password: password }),
-          {
-            headers: { 'Content-Type': 'application/json' },
-          }
+        JSON.stringify({ username: username, password: password }),
+        {
+          headers: { 'Content-Type': 'application/json' },
+        }
       );
       console.log(JSON.stringify(response?.data));
       const accessToken = response?.data?.token;
       console.log(accessToken);
       const roles = response?.data?.roles;
+
+      // Convert the roles array to a JSON string.
+      const rolesJson = JSON.stringify(roles);
+      console.log("aiciea ne uitam");
+      console.log(rolesJson);
+      // Save the roles JSON string to localStorage.
+      localStorage.setItem('roles', rolesJson);
+
       localStorage.setItem('token', accessToken);
-      localStorage.setItem('roles', roles);
       navigate('/userpage');
 
 
@@ -62,31 +69,31 @@ const Login = () => {
   }
 
   return (
-      <body className="login-body">
+    <body className="login-body">
       <section className="login-section">
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
         <h1 className="login-signIn">{t("Login.title")}</h1>
         <form className="login-form" onSubmit={handleSubmit}>
           <label htmlFor="username">{t("Login.username")}:</label>
           <input
-              type="text"
-              id="username"
-              ref={userRef}
-              autoComplete="off"
-              onChange={(e) => setUsername(e.target.value)}
-              value={username}
-              required
-              className="login-input"
+            type="text"
+            id="username"
+            ref={userRef}
+            autoComplete="off"
+            onChange={(e) => setUsername(e.target.value)}
+            value={username}
+            required
+            className="login-input"
           />
 
           <label htmlFor="password">{t("Login.password")}:</label>
           <input
-              type="password"
-              id="password"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-              required
-              className="login-input"
+            type="password"
+            id="password"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+            required
+            className="login-input"
 
           />
           <button className="login-button">{t("Login.sign-in")}</button>
@@ -99,7 +106,7 @@ const Login = () => {
                 </span>
         </p>
       </section>
-      </body>
+    </body>
   )
 }
 
