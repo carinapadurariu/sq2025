@@ -128,7 +128,7 @@ const EditUserProfile = () => {
     };
 
     return (
-        <div className="edit-user-profile-container">
+        <body className="edit-user-profile-container">
             <button className="delete-button" onClick={handleDeleteAccount}>
                 Delete Account
             </button>
@@ -138,6 +138,7 @@ const EditUserProfile = () => {
                     <div className='edit-user-input'>
                         <div className='edit-user-input-group'>
                             <label>Email:</label>
+                            <br/>
                             <input
                                 type="email"
                                 id="email"
@@ -148,6 +149,7 @@ const EditUserProfile = () => {
                         </div>
                         <div className='edit-user-input-group'>
                             <label>First Name:</label>
+                            <br/>
                             <input
                                 type="text"
                                 id="firstName"
@@ -158,6 +160,7 @@ const EditUserProfile = () => {
                         </div>
                         <div className='edit-user-input-group'>
                             <label>Last Name:</label>
+                            <br/>
                             <input
                                 type="text"
                                 id="lastName"
@@ -168,6 +171,7 @@ const EditUserProfile = () => {
                         </div>
                         <div className='edit-user-input-group'>
                             <label>Phone Number:</label>
+                            <br/>
                             <input
                                 type="text"
                                 id="phoneNumber"
@@ -224,7 +228,7 @@ const EditUserProfile = () => {
                 <br/>
                 <br/>
             </form>
-        </div>
+        </body>
     );
 }
 

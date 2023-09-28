@@ -40,35 +40,37 @@ const UserProfile = () => {
     }
 
     return (
-        <div className="user-profile-container">
-            <form className="userPage-form">
-                <h2 style={{ fontSize: '25px', color:"yellow" }}><u>User Profile</u></h2>
+        <body className='userPage-body'>
+        <section className="userPage-section">
+            <form className="userPage-form" style={{ width: '400px' }}>
+                <h2 style={{ fontSize: '25px', color:"lime" }}><u>User Profile</u></h2>
                 <p className="profile-username">
                     <p>
-                        <strong>Username:</strong> <span style={{ color: 'magenta' }}>{user.username}</span>
+                        <strong style={{marginLeft:'-40px'}}>Username:</strong> <span style={{ color: 'red' }}>{user.username}</span>
                     </p>
 
                 </p>
                 <p>
-                    <strong>Email:</strong> <span style={{ color: 'magenta' }}>{user.email}</span>
+                    <strong>Email:</strong> <span style={{ color: 'red' }}>{user.email}</span>
                 </p>
                 <p>
-                    <strong>First Name:</strong> <span style={{ color: 'magenta' }}>{user.firstName}</span>
+                    <strong style={{marginLeft:'-90px'}}>First Name:</strong> <span style={{ color: 'red' }}>{user.firstName}</span>
                 </p>
                 <p>
-                    <strong>Last Name:</strong> <span style={{ color: 'magenta' }}>{user.lastName}</span>
+                    <strong style={{marginLeft:'-80px'}}>Last Name:</strong> <span style={{ color: 'red' }}>{user.lastName}</span>
                 </p>
                 <p>
-                    <strong>Phone:</strong> <span style={{ color: 'magenta' }}>{user.phoneNumber}</span>
+                    <strong style={{marginLeft:'-60px'}}>Phone:</strong> <span style={{ color: 'red' }}>{user.phoneNumber}</span>
                 </p>
                 <p>
-                    <strong>Role:</strong> <span style={{ color: 'magenta' }}>{user.roles}</span>
+                    <strong style={{marginLeft:'-80px'}}>Role:</strong> <span style={{ color: 'red' }}>{user.roles}</span>
                 </p>
                 <Link className="userPage-editProfileButton" to="/edituserprofile">
                     Edit Profile
                 </Link>
             </form>
-        </div>
+        </section>
+        </body>
     );
 };
 
