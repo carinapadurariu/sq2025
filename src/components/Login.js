@@ -2,8 +2,9 @@ import { useRef, useState, useEffect } from 'react';
 import useAuth from '../hooks/useAuth';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
-import { HOST } from './constants'
-const LOGIN_URL = HOST + 'api/auth/login';
+import {HOST} from './constants'
+import {useTranslation} from "react-i18next";
+const LOGIN_URL =  HOST + 'api/auth/login';
 
 const Login = () => {
 
@@ -15,6 +16,9 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errMsg, setErrMsg] = useState('');
+
+  const { t, i18n } = useTranslation();
+
 
   useEffect(() => {
     userRef.current.focus();
@@ -68,9 +72,9 @@ const Login = () => {
     <body className="login-body">
       <section className="login-section">
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-        <h1 className="login-signIn">Sign In</h1>
+        <h1 className="login-signIn">{t("Login.title")}</h1>
         <form className="login-form" onSubmit={handleSubmit}>
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="username">{t("Login.username")}:</label>
           <input
             type="text"
             id="username"
@@ -82,7 +86,7 @@ const Login = () => {
             className="login-input"
           />
 
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">{t("Login.password")}:</label>
           <input
             type="password"
             id="password"
@@ -92,14 +96,14 @@ const Login = () => {
             className="login-input"
 
           />
-          <button className="login-button">Sign In</button>
+          <button className="login-button">{t("Login.sign-in")}</button>
 
         </form>
         <p className="login-register-button">
-          Need an Account?<br />
+          {t("Login.register-button")}<br />
           <span className="line">
-            <Link className="login-signUp" to="/register">Sign Up</Link>
-          </span>
+                    <Link className="login-signUp" to="/register">{t("Login.sign-up")}</Link>
+                </span>
         </p>
       </section>
     </body>
@@ -107,3 +111,4 @@ const Login = () => {
 }
 
 export default Login
+
