@@ -1241,7 +1241,7 @@ position: absolute;
 
 .register-section {
   background-color: rgba(0, 0, 0, 0.4);
-  width: 70%;
+  width: 80%;
   max-width: 420px;
   min-height: 330px;
   display: flex;
@@ -1258,7 +1258,6 @@ position: absolute;
 
 .register-form {
   text-align: center;
-
 }
 
 .register-success{
@@ -1273,7 +1272,7 @@ position: absolute;
   width: 100%;
   padding: 0.25rem;
   font-family: 'Nunito', sans-serif;
-  font-size: 22px;
+  font-size: 15px;
   border-radius: 0.5rem;
 }
 
@@ -1286,12 +1285,15 @@ position: absolute;
 }
 
 .register-signUp {
-  background-color: #8c8c8c;
-  color:white;
+  background-color: #004edf;
+  color:rgb(255, 255, 255);
   text-align: center;
-  padding: 0.4rem 42%;
+  padding: 0.4rem;
   border-radius: 0.5rem;
-  margin-top: 20px;
+  height: 35px;
+  margin-top: 23px;
+  width: 90%;
+
 
 }
 
@@ -1350,6 +1352,7 @@ position: absolute;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 
 
 /* *****EditUser-Profile****** */
