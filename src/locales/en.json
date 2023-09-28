@@ -89,6 +89,21 @@
         "description":"You must have been assigned an Editor role.",
         "home-button":"Home"
     },
+    "EditUserProfile": {
+        "delete-button": "Delete account",
+        "edit-profile": "Edit Profile",
+        "email": "Email:",
+        "first-name":"First Name:",
+        "last-name": "Last name:",
+        "phone-number": "Phone Number",
+        "save-changes": "Save Changes",
+        "change-password": "Change Password",
+        "current-password": "Current Password:",
+        "new-password": "New Password:",
+        "confirm-password": "Confirm Password:",
+        "edit-password": "Edit Password"
+
+    },
     "Footer":{
         "copyright":"Copyright 2022. All Rights Reserved"
     },
@@ -112,6 +127,7 @@
         "private-links-3":"Admins Page"
     },
     "Login":{
+        "title": "Login",
         "sign-in":"Sign In",
         "username":"Username",
         "password":"Password",
@@ -137,7 +153,7 @@
         "description-1":"Subscribe to our Newsletter",
         "description-2":" & Never miss latest updates",
         "sending":"Sending...",
-        "submit-button":"Submit" 
+        "submit-button":"Submit"
     },
     "Presentation":{
         "title":"Over the Stations",
@@ -149,6 +165,7 @@
         "image-4":"Problem Solving"
     },
     "Register":{
+        "title" : "Register",
         "success-message":"Success!",
         "sign-in":"Sign In",
         "register-button":"Register",
@@ -197,4 +214,6 @@
         "title":"Users List",
         "not-found":"No users to display"
     }
+
 }
+

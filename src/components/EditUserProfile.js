@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {HOST} from './constants'
 import {useNavigate} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 
 const EditUserProfile = () => {
@@ -19,6 +20,9 @@ const EditUserProfile = () => {
     });
 
     const navigate = useNavigate();
+
+    const { t, i18n } = useTranslation();
+
 
     useEffect(() => {
         // Fetch the user's current profile data and populate the form
@@ -129,105 +133,105 @@ const EditUserProfile = () => {
 
     return (
         <body className="edit-user-profile-container">
-            <button className="delete-button" onClick={handleDeleteAccount}>
-                Delete Account
-            </button>
-            <form className="edit-user-profile-form" onSubmit={handleProfileSubmit}>
-                <div className="edit-user-form-group">
-                    <h2>Edit Profile</h2>
-                    <div className='edit-user-input'>
-                        <div className='edit-user-input-group'>
-                            <label>Email:</label>
-                            <br/>
-                            <input
-                                type="email"
-                                id="email"
-                                placeholder={formData.email}
-                                onChange={handleProfileChange}
-                                className='edit-user-input'
-                            />
-                        </div>
-                        <div className='edit-user-input-group'>
-                            <label>First Name:</label>
-                            <br/>
-                            <input
-                                type="text"
-                                id="firstName"
-                                placeholder={formData.firstName}
-                                onChange={handleProfileChange}
-                                className='edit-user-input'
-                            />
-                        </div>
-                        <div className='edit-user-input-group'>
-                            <label>Last Name:</label>
-                            <br/>
-                            <input
-                                type="text"
-                                id="lastName"
-                                placeholder={formData.lastName}
-                                onChange={handleProfileChange}
-                                className='edit-user-input'
-                            />
-                        </div>
-                        <div className='edit-user-input-group'>
-                            <label>Phone Number:</label>
-                            <br/>
-                            <input
-                                type="text"
-                                id="phoneNumber"
-                                placeholder={formData.phoneNumber}
-                                onChange={handleProfileChange}
-                                className='edit-user-input'
-                            />
-                        </div>
+        <button className="delete-button" onClick={handleDeleteAccount}>
+            {t("EditUserProfile.delete-button")}
+        </button>
+        <form className="edit-user-profile-form" onSubmit={handleProfileSubmit}>
+            <div className="edit-user-form-group">
+                <h2>{t("EditUserProfile.edit-profile")}</h2>
+                <div className='edit-user-input'>
+                    <div className='edit-user-input-group'>
+                        <label>{t("EditUserProfile.email")}</label>
+                        <br/>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder={formData.email}
+                            onChange={handleProfileChange}
+                            className='edit-user-input'
+                        />
                     </div>
+                    <div className='edit-user-input-group'>
+                        <label>{t("EditUserProfile.first-name")}</label>
+                        <br/>
+                        <input
+                            type="text"
+                            id="firstName"
+                            placeholder={formData.firstName}
+                            onChange={handleProfileChange}
+                            className='edit-user-input'
+                        />
+                    </div>
+                    <div className='edit-user-input-group'>
+                        <label>{t("EditUserProfile.last-name")}</label>
+                        <br/>
+                        <input
+                            type="text"
+                            id="lastName"
+                            placeholder={formData.lastName}
+                            onChange={handleProfileChange}
+                            className='edit-user-input'
+                        />
+                    </div>
+                    <div className='edit-user-input-group'>
+                        <label>{t("EditUserProfile.phone-number")}</label>
+                        <br/>
+                        <input
+                            type="text"
+                            id="phoneNumber"
+                            placeholder={formData.phoneNumber}
+                            onChange={handleProfileChange}
+                            className='edit-user-input'
+                        />
+                    </div>
+                </div>
+                <br/>
+                <button className='edit-profile-submit' type="submit">{t("EditUserProfile.save-changes")}</button>
+            </div>
+        </form>
+        <form className="edit-password-form" onSubmit={handlePasswordSubmit}>
+            <h2>{t("EditUserProfile.edit-password")}</h2>
+            <div className="edit-password-form-group">
+                <div className='edit-user-input-group'>
+                    <label>{t("EditUserProfile.current-password")}</label>
                     <br/>
-                    <button className='edit-profile-submit' type="submit">Save Changes</button>
+                    <input
+                        type="password"
+                        id="oldPassword"
+                        onChange={handlePasswordChange}
+                        className='edit-password-input'
+                    />
                 </div>
-            </form>
-            <form className="edit-password-form" onSubmit={handlePasswordSubmit}>
-                <h2>Change Password</h2>
-                <div className="edit-password-form-group">
-                    <div className='edit-user-input-group'>
-                        <label>Current Password:</label>
-                        <br/>
-                        <input
-                            type="password"
-                            id="oldPassword"
-                            onChange={handlePasswordChange}
-                            className='edit-password-input'
-                        />
-                    </div>
-                    <div className='edit-user-input-group'>
+                <div className='edit-user-input-group'>
 
-                        <label>New Password:</label>
-                        <br/>
-                        <input
-                            type="password"
-                            id="newPassword"
-                            onChange={handlePasswordChange}
-                            className='edit-password-input'
+                    <label>{t("EditUserProfile.new-password")}</label>
+                    <br/>
+                    <input
+                        type="password"
+                        id="newPassword"
+                        onChange={handlePasswordChange}
+                        className='edit-password-input'
 
-                        />
-                    </div>
-                    <div className='edit-user-input-group'>
-                        <label>Confirm Password:</label>
-                        <br/>
-                        <input
-                            type="password"
-                            id="confirmPassword"
-                            onChange={handlePasswordChange}
-                            className='edit-password-input'
-                        />
-                    </div>
+                    />
                 </div>
-                <br/>
-                <br/>
-                <br/>
-                <button className='edit-password-submit' type="submit">Change Password</button>
-                <br/>
-                <br/>
-            </form>
+                <div className='edit-user-input-group'>
+                    <label>{t("EditUserProfile.confirm-password")}</label>
+                    <br/>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        onChange={handlePasswordChange}
+                        className='edit-password-input'
+                    />
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <button className='edit-password-submit' type="submit">{t("EditUserProfile.change-password")}</button>
+            <br/>
+            <br/>
+        </form>
         </body>
     );
 }

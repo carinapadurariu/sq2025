@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import {HOST} from './constants'
+import {useTranslation} from "react-i18next";
 
 const NAME_REGEX = /^[A-Za-z\s'-]{1,50}$/;
 const PHONE_NUMBER_REGEX = /^\d{10}$/;
@@ -45,6 +46,9 @@ const Register = () => {
 
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
+
+    const { t, i18n } = useTranslation();
+
 
     useEffect(() => {
         userRef.current.focus();
@@ -130,19 +134,19 @@ const Register = () => {
         <>
             {success ? (
                 <section className='register-success'>
-                    <h1>Success! You can now return to the <a href="/login">login page</a></h1>
+                    <h1> <a href="/login">{t("Register.success-message")}</a></h1>
                 </section>
             ) : (
                 <body className="register-body">
                 <section className="register-section">
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-                    <h1 className="register-h1">Register</h1>
+                    <h1 className="register-h1">{t("Register.title")}</h1>
                     <form className="register-form" onSubmit={handleSubmit}>
                         <table>
                             <tr>
                                 <th>
                                     <label htmlFor="firstName">
-                                        First Name:
+                                        {t("Register.first-name")}
                                         <FontAwesomeIcon icon={faCheck} className={validFirstName ? "valid" : "hide"} />
                                         <FontAwesomeIcon icon={faTimes} className={validFirstName || !firstName ? "hide" : "invalid"} />
                                     </label>
@@ -162,14 +166,14 @@ const Register = () => {
 
                                     <p id="firstNameNote" className={firstNameFocus && firstName && !validFirstName ? "instructions" : "offscreen"}>
                                         <FontAwesomeIcon icon={faInfoCircle} />
-                                        At least 1 character.<br />
-                                        Must begin with a letter.<br />
-                                        Letters, spaces, apostrophes, hyphens allowed.
+                                        {t("Register.first-name-error-1")}<br />
+                                        {t("Register.first-name-error-2")}<br />
+                                        {t("Register.first-name-error-3")}
                                     </p>
                                 </th>
                                 <th>
                                     <label htmlFor="lastName">
-                                        Last Name:
+                                        {t("Register.last-name")}
                                         <FontAwesomeIcon icon={faCheck} className={validLastName ? "valid" : "hide"} />
                                         <FontAwesomeIcon icon={faTimes} className={validLastName || !lastName ? "hide" : "invalid"} />
                                     </label>
@@ -190,16 +194,16 @@ const Register = () => {
 
                                     <p id="lastNameNote" className={lastNameFocus && lastName && !validLastName ? "instructions" : "offscreen"}>
                                         <FontAwesomeIcon icon={faInfoCircle} />
-                                        At least 1 character.<br />
-                                        Must begin with a letter.<br />
-                                        Letters, spaces, apostrophes, hyphens allowed.
+                                        {t("Register.last-name-error-1")}<br />
+                                        {t("Register.last-name-error-2")}<br />
+                                        {t("Register.last-name-error-3")}
                                     </p>
                                 </th>
                             </tr>
                             <tr>
                                 <th>
                                     <label htmlFor="phoneNumber">
-                                        Phone Number:
+                                        {t("Register.phone-number")}
                                         <FontAwesomeIcon icon={faCheck} className={validPhoneNumber ? "valid" : "hide"} />
                                         <FontAwesomeIcon icon={faTimes} className={validPhoneNumber || !phoneNumber ? "hide" : "invalid"} />
                                     </label>
@@ -220,12 +224,12 @@ const Register = () => {
 
                                     <p id="phoneNumberNote" className={phoneNumberFocus && phoneNumber && !validPhoneNumber ? "instructions" : "offscreen"}>
                                         <FontAwesomeIcon icon={faInfoCircle} />
-                                        10 digits.<br />
+                                        {t("Register.phone-number-error-1")}<br />
                                     </p>
                                 </th>
                                 <th>
                                     <label htmlFor="email">
-                                        Email:
+                                        {t("Register.email")}
                                         <FontAwesomeIcon icon={faCheck} className={validEmail ? "valid" : "hide"} />
                                         <FontAwesomeIcon icon={faTimes} className={validEmail || !email ? "hide" : "invalid"} />
                                     </label>
@@ -246,14 +250,14 @@ const Register = () => {
 
                                     <p id="emailNote" className={emailFocus && email && !validEmail ? "instructions" : "offscreen"}>
                                         <FontAwesomeIcon icon={faInfoCircle} />
-                                        Email must contain @.
+                                        {t("Register.email-error-1")}
                                     </p>
                                 </th>
                             </tr>
                             <th>
                                 <tr>
                                     <label htmlFor="username">
-                                        Username:
+                                        {t("Register.username")}
                                         <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
                                         <FontAwesomeIcon icon={faTimes} className={validName || !username ? "hide" : "invalid"} />
                                     </label>
@@ -274,15 +278,15 @@ const Register = () => {
                                     />
                                     <p id="uidnote" className={userFocus && username && !validName ? "instructions" : "offscreen"}>
                                         <FontAwesomeIcon icon={faInfoCircle} />
-                                        4 to 24 characters.<br />
-                                        Must begin with a letter.<br />
-                                        Letters, numbers, underscores, hyphens allowed.
+                                        {t("Register.username-error-1")}<br />
+                                        {t("Register.username-error-2")}<br />
+                                        {t("Register.username-error-3")}
                                     </p>
                                 </tr>
 
                                 <tr>
                                     <label htmlFor="confirm_pwd">
-                                        Confirm Password:
+                                        {t("Register.confirm-password")}
                                         <FontAwesomeIcon icon={faCheck} className={validMatch && matchPwd ? "valid" : "hide"} />
                                         <FontAwesomeIcon icon={faTimes} className={validMatch || !matchPwd ? "hide" : "invalid"} />
                                     </label>
@@ -301,12 +305,12 @@ const Register = () => {
                                     />
                                     <p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : "offscreen"}>
                                         <FontAwesomeIcon icon={faInfoCircle} />
-                                        Must match the first password input field.
+                                        {t("Register.confirm-password-error-1")}
                                     </p>
                                 </tr>
                             </th>
                             <label htmlFor="password">
-                                Password:
+                                <strong>{t("Register.password")}</strong>
                                 <FontAwesomeIcon icon={faCheck} className={validPwd ? "valid" : "hide"} />
                                 <FontAwesomeIcon icon={faTimes} className={validPwd || !password ? "hide" : "invalid"} />
                             </label>
@@ -325,19 +329,19 @@ const Register = () => {
                             />
                             <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
                                 <FontAwesomeIcon icon={faInfoCircle} />
-                                8 to 24 characters.<br />
-                                Must include uppercase and lowercase letters, a number and a special character.<br />
-                                Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
+                                {t("Register.password-error-1")}<br />
+                                {t("Register.password-error-2")}<br />
+                                {t("Register.password-error-3")} <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
                             </p>
 
 
-                            <button className="register-signUp" disabled={!validName || !validPwd || !validMatch ? true : false} onClick={handleSubmit}>Sign Up</button>
+                            <button className="register-signUp" disabled={!validName || !validPwd || !validMatch ? true : false} onClick={handleSubmit}>{t("Register.register-button")}</button>
                         </table>
                     </form>
                     <p className="register-login-button">
-                        Already registered?<br />
+                        {t("Register.login")}<br />
                         <span className="register-line">
-                                <Link className="register-button-signIn" to="/login">Sign In</Link>
+                                <Link className="register-button-signIn" to="/login">{t("Register.sign-in")}</Link>
                             </span>
                     </p>
                 </section>
@@ -348,5 +352,7 @@ const Register = () => {
 }
 
 export default Register
+
+
 
 
