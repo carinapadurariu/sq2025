@@ -22,11 +22,11 @@ import pollImg from '../assets/img/pollution.png'
 import transmImg from '../assets/img/transm.png'
 import brakeImg from '../assets/img/brake.png'
 import awardImg from '../assets/img/award.png'
-
-
+import { useTranslation } from 'react-i18next';
 
 
 export const About = () => {
+  const { t, i18n } = useTranslation();
 
    useEffect(() => {
    
@@ -41,7 +41,7 @@ export const About = () => {
       <video autoPlay loop muted className="video-background">
           <source src={videoBackground} type="video/mp4" />
         </video>
-        <p className="section_text_p1">Get To Know More</p>
+        <p className="section_text_p1">{t("About.section_text_p1")}</p>
         <div className="section-container">
           <div className="image-container">
             <img
@@ -51,13 +51,12 @@ export const About = () => {
             />
           </div>
           <div className="about-info-text">
-            <h2> Reliable Auto Services In Your Ways </h2>
+            <h2> {t("About.about-info-text")} </h2>
           </div>
           <div className="subtext-about">
-          <p className="color-paragraph">At NitroServices, we care about your car! <br />
+          <p className="color-paragraph">{t("About.color-paragraph")} <br />
           <br/>
-           <p> Travel safely and confidently when you choose our high-quality services
-               for your car's care.
+           <p> {t("About.safety-message")}
            </p>
             </p>
             </div>
@@ -65,38 +64,38 @@ export const About = () => {
       <div className="left-column">
         <ul>
           <li>
-            <strong>Auto Body Repair and Painting</strong>
+            <strong>{t("About.left-column-1")}</strong>
           </li>
           <li>
-            <strong>Auto Mechanics</strong>
+            <strong>{t("About.left-column-2")}</strong>
           </li>
           <li>
-            <strong>Computerized Auto Diagnostics</strong>
+            <strong>{t("About.left-column-3")}</strong>
           </li>
           <li>
-            <strong>Auto Electrical</strong>
+            <strong>{t("About.left-column-4")}</strong>
           </li>
           <li>
-            <strong>Wheel Alignment</strong>
+            <strong>{t("About.left-column-5")}</strong>
           </li>
         </ul>
       </div>
       <div className="right-column">
         <ul>
           <li>
-            <strong>Auto Air Conditioning</strong>
+            <strong>{t("About.right-column-1")}</strong>
           </li>
           <li>
-            <strong>Tire Vulcanization</strong>
+            <strong>{t("About.right-column-2")}</strong>
           </li>
           <li>
-            <strong>Auto Consultation</strong>
+            <strong>{t("About.right-column-3")}</strong>
           </li>
           <li>
-            <strong>Spare Parts</strong>
+            <strong>{t("About.right-column-4")}</strong>
           </li>
           <li>
-            <strong>Auto Towing Services</strong>
+            <strong>{t("About.right-column-5")}</strong>
           </li>
         </ul>
       </div>
@@ -108,90 +107,90 @@ export const About = () => {
               className="about-pic"
             />
       <div className="service-description">
-      <p>NITRO Services aims to set an example in the automotive service industry through the expertise and passion of its professionals and the quality of the services provided.</p>
-      <p>It's very easy to get in touch with us and schedule an appointment at our service center. You can contact us for assistance whenever an issue arises with your car.</p>
-      <p>We'll respond promptly and together, we'll determine the date and time for your visit to the service center.</p><br/><br/>
+      <p>{t("About.service-description-1")}</p>
+      <p>{t("About.service-description-2")}</p>
+      <p>{t("About.service-description-3")}</p><br/><br/>
       <ul className="service-features">
-        <li className="list-about-item">Quick appointment scheduling</li>
-        <li className="list-about-item">Guarantee for auto service labor and new parts</li>
-        <li className="list-about-item">Professionalism and honesty</li>
-        <li className="list-about-item">Competitive pricing</li>
-        <li className="list-about-item">Transparency and upfront costs</li>
+        <li className="list-about-item">{t("About.service-features-1")}</li>
+        <li className="list-about-item">{t("About.service-features-2")}</li>
+        <li className="list-about-item">{t("About.service-features-3")}</li>
+        <li className="list-about-item">{t("About.service-features-4")}</li>
+        <li className="list-about-item">{t("About.service-features-5")}</li>
       </ul>
     </div>
     <h3 className="h3-text">
-      Which Problem Fits You The Best?
+    {t("About.h3-text")}
     </h3>
     <div className="drop-down">
     <Dropdown className="d-inline mx-2">
   <Dropdown.Toggle id="dropdown-autoclose-true">
-    Wheels
+  {t("About.problem-1")}
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="https://autochrome.ro/">Flat Tire </Dropdown.Item>
-    <Dropdown.Item href="https://autochrome.ro/">Uneven Tire Wear</Dropdown.Item>
-    <Dropdown.Item href="https://autochrome.ro/">Bald Tires </Dropdown.Item>
+    <Dropdown.Item href="https://autochrome.ro/">{t("About.wheels-1")} </Dropdown.Item>
+    <Dropdown.Item href="https://autochrome.ro/">{t("About.wheels-2")}</Dropdown.Item>
+    <Dropdown.Item href="https://autochrome.ro/">{t("About.wheels-3")} </Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
 <Dropdown className="d-inline mx-2" autoClose="inside">
   <Dropdown.Toggle id="dropdown-autoclose-inside">
-  Check Engine
+  {t("About.problem-2")}
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">Overheating </Dropdown.Item>
-    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">Engine Misfire </Dropdown.Item>
-    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">Oil Leaks </Dropdown.Item>
+    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">{t("About.check-engine-menu-1")} </Dropdown.Item>
+    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">{t("About.check-engine-menu-2")} </Dropdown.Item>
+    <Dropdown.Item href="https://serviceautocluj.ro/diagnoza-auto-cluj/">{t("About.check-engine-menu-3")} </Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
 <Dropdown className="d-inline mx-2" autoClose="inside">
   <Dropdown.Toggle id="dropdown-autoclose-inside">
-  Electrical Problems
+  {t("About.problem-3")}
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">Dead Battery</Dropdown.Item>
-    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">Faulty Alternator</Dropdown.Item>
-    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">Starter Motor Issues</Dropdown.Item>
+    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">{t("About.electrical-problems-menu-1")}</Dropdown.Item>
+    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">{t("About.electrical-problems-menu-2")}</Dropdown.Item>
+    <Dropdown.Item href="https://serviceautoclujnapoca.ro/electrica-auto/">{t("About.electrical-problems-menu-3")}</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
 <Dropdown className="d-inline mx-2" autoClose="inside">
   <Dropdown.Toggle id="dropdown-autoclose-inside">
-  Emissions or Pollution Control Problems
+  {t("About.problem-4")}
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">Catalytic Converter Failure:</Dropdown.Item>
-    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">Exhaust Gas Recirculation </Dropdown.Item>
-    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">Air Injection System Malfunction</Dropdown.Item>
+    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">{t("About.emissions-problems-menu-1")}</Dropdown.Item>
+    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">{t("About.emissions-problems-menu-2")}</Dropdown.Item>
+    <Dropdown.Item href="https://www.facebook.com/profile.php?id=61550265524787">{t("About.emissions-problems-menu-3")}</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
 <Dropdown className="d-inline mx-2" autoClose="outside">
   <Dropdown.Toggle id="dropdown-autoclose-outside">
-  Transmission Issues
+  {t("About.problem-5")}
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">Slipping Transmission</Dropdown.Item>
-    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">Delayed or Rough Shifting</Dropdown.Item>
-    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">Burning Smell</Dropdown.Item>
+    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">{t("About.transmission-problems-menu-1")}</Dropdown.Item>
+    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">{t("About.transmission-problems-menu-2")}</Dropdown.Item>
+    <Dropdown.Item href="https://blackautocluj.com/service-auto-cluj/reparatii-clima-auto-cluj-incarcare-freon-cluj/">{t("About.transmission-problems-menu-3")}</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
 <Dropdown className="d-inline mx-2" autoClose={false}>
   <Dropdown.Toggle id="dropdown-autoclose-false">
-  Brake System Problems
+  {t("About.problem-6")}
   </Dropdown.Toggle>
 
   <Dropdown.Menu className="dropdown-pink-background">
-    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">Spongy or Soft Brake Pedal</Dropdown.Item>
-    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">Brake Warning Light</Dropdown.Item>
-    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">Reduced Braking Power</Dropdown.Item>
+    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">{t("About.brake-system-problems-menu-1")}</Dropdown.Item>
+    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">{t("About.brake-system-problems-menu-2")}</Dropdown.Item>
+    <Dropdown.Item href="https://www.euromaster.ro/intretinere-autoturism/verificare-sistem-de-franare">{t("About.brake-system-problems-menu-3")}</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
     </div>
@@ -209,10 +208,9 @@ export const About = () => {
      }}>
       <Card.Img variant="top" src={engine2Img} />
       <Card.Body>
-        <Card.Title>Check Engine</Card.Title>
+        <Card.Title>{t("About.check-engine-1")}</Card.Title>
         <Card.Text>
-        Check engine light illuminated? 
-        Bring your vehicle to our service center for a thorough inspection.
+        {t("About.check-engine-2")}
         </Card.Text>
         {/* <Button variant="primary" className="btn-design">Go Check The Car</Button> */}
       </Card.Body>
@@ -227,11 +225,9 @@ export const About = () => {
       <Card.Img variant="top" src={elec1Img} />
       <Card.Body>
       <br/>
-        <Card.Title>Electrical Problems</Card.Title>
+        <Card.Title>{t("About.electrical-problems-1")}</Card.Title>
         <Card.Text>
-         
-        Experiencing electrical issues?
-        Schedule a service appointment to diagnose and resolve your car's problems.
+        {t("About.electrical-problems-2")}
         </Card.Text>
         {/* <Button variant="primary" className="btn-design">Go Check The Car</Button> */}
       </Card.Body>
@@ -245,10 +241,9 @@ export const About = () => {
      }}>
       <Card.Img variant="top" src={pollImg} />
       <Card.Body>
-        <Card.Title>Emissions & Pollution</Card.Title>
+        <Card.Title>{t("About.emissions-problems-1")}</Card.Title>
         <Card.Text>
-        Concerned about pollution and emissions? 
-        Visit our auto services for an eco-friendly and safe solution for your vehicle.
+        {t("About.emissions-problems-2")}
         </Card.Text>
         {/* <Button variant="primary" className="btn-design">Go Check The Car</Button> */}
       </Card.Body>
@@ -262,10 +257,9 @@ export const About = () => {
      }}>
       <Card.Img variant="top" src={transmImg} />
       <Card.Body>
-        <Card.Title>Transmission Issues</Card.Title>
+        <Card.Title>{t("About.transmission-problems-1")}</Card.Title>
         <Card.Text>
-        Experience smooth driving?
-        Entrust your car's transmission issues to our expert repair services today.
+        {t("About.transmission-problems-2")}
         </Card.Text>
         {/* <Button variant="primary" className="btn-design">Go Check The Car</Button> */}
       </Card.Body>
@@ -279,10 +273,9 @@ export const About = () => {
      }}>
       <Card.Img variant="top" src={brakeImg}  />
       <Card.Body>
-        <Card.Title>Brake System Problems</Card.Title>
+        <Card.Title>{t("About.brake-system-problems-1")}</Card.Title>
         <Card.Text>
-        For brake system concerns, ensure your safety by 
-        scheduling a thorough inspection and maintenance with us.
+        {t("About.brake-system-problems-2")}
         </Card.Text>
         {/* <Button variant="primary" className="btn-design">Go Check The Car</Button> */}
       </Card.Body>
