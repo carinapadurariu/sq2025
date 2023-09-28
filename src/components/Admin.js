@@ -2,19 +2,27 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import {HOST} from './constants'
 import axios from 'axios';
+const ADMIN_URL = HOST + 'admin/users/';
 
 const Admin = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get(`${HOST}admin/users`)
+
+        const authToken = localStorage.getItem('token');
+
+        axios.get(ADMIN_URL, {
+            headers: {
+                Authorization: `Bearer ${authToken}`,
+            },
+        })
             .then(response => setUsers(response.data))
             .catch(error => console.log(error));
     }, []);
 
     const handleDeleteUser = (user) => {
         if (window.confirm('Are you sure you want to delete this user?')) {
-            axios.delete(`${HOST}admin/users/${user.username}`)
+            axios.delete(`${ADMIN_URL}${user.username}`)
                 .then(() => setUsers(users.filter(u => u.username !== user.username)))
                 .catch(error => console.log(error));
         }
@@ -27,8 +35,8 @@ const Admin = () => {
                 {users.map((user) => (
                     <li key={user.username}>
                         {user.name}
-                        <Link to = {`${HOST}admin/users/${user.username}/profile`}>View Profile</Link>
-                        <Link to = {`${HOST}admin/users/${user.username}/edit`}>Edit User</Link>
+                        <Link to = {`${ADMIN_URL}${user.username}/profile`}>View Profile</Link>
+                        <Link to = {`${ADMIN_URL}${user.username}/edit`}>Edit User</Link>
                         <button onClick={() => handleDeleteUser(user)}>Delete User</button>
                     </li>
                 ))}
