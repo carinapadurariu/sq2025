@@ -68,7 +68,28 @@
         "brake-system-problems-2":"For brake system concerns, ensure your safety by scheduling a thorough inspection and maintenance with us."
     },
     "Admin":{
-        "title":"Admins Page"
+        "title":"Admins Page",
+        "table-1":"Username",
+        "table-2":"Email",
+        "table-3":"First name",
+        "table-4":"Last name",
+        "table-5":"Phone",
+        "table-6":"Roles"
+    },
+    "CarProfile":{
+        "total-cars":"Total Cars",
+        "daily-tips":"Daily Tips",
+        "clients-annually":"Clients Annually",
+        "kilometers-daily":"Kilometers Daily",
+        "statistics-1":"Miles Statistics",
+        "statistics-2":"Car Statistics",
+        "percentage":"74% Recommended",
+        "car":"BMW",
+        "kilometers":"130k"
+    },
+    "ConnectingHandling":{
+        "disconnect":"Let's Disconnect",
+        "connect":"Let's Connect"
     },
     "Contact":{
         "title":"Contact Me",

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { HOST } from "./constants";
+import { useTranslation } from 'react-i18next';
 
 const ConnectingHandling = () => {
     const DISCONNECT_URL = HOST + 'api/auth/signout';
     const [isConnected, setIsConnected] = useState(false);
     const navigate = useNavigate();
     const roles = localStorage.getItem('roles');
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
         if (roles != null) {
@@ -35,11 +37,11 @@ const ConnectingHandling = () => {
 
     return isConnected ? (
         <button className="vvd" onClick={handleDisconnect}>
-            <span>Let's Disconnect</span>
+            <span>{t("ConnectingHandling.disconnect")}</span>
         </button>
     ) : (
         <button className="vvd" onClick={handleConnect}>
-            <span>Let's Connect</span>
+            <span>{t("ConnectingHandling.connect")}</span>
         </button>
     );
 };

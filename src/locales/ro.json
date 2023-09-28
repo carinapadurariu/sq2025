@@ -68,7 +68,24 @@
         "brake-system-problems-2":"Pentru probleme cu sistemul de frânare, asigură-ți siguranța și a celor din jur și vizitează unul dintre centrele noastre pentru o inspecție și reparații profesionale."
     },
     "Admin":{
-        "title":"Pagina de administrare"
+        "title":"Pagina de administrare",
+        "table-1":"Username",
+        "table-2":"Email",
+        "table-3":"Prenume",
+        "table-4":"Nume de familie",
+        "table-5":"Telefon",
+        "table-6":"Roluri"
+    },
+    "CarProfile":{
+        "total-cars":"Totalul masinilor",
+        "daily-tips":"Sfaturi zilnice",
+        "clients-annually":"Clienti anuali",
+        "kilometers-daily":"Kilometri zilnici",
+        "statistics-1":"Statistici despre mile",
+        "statistics-2":"Statisticile mașinii",
+        "percentage":"74% Recomandat",
+        "car":"BMW",
+        "kilometers":"130k"
     },
     "Contact":{
         "title":"Contactează-ne",
@@ -79,6 +96,10 @@
         "city":"Cluj-Napoca",
         "email":"nitroservices@gmail.com",
         "popup":"Principalul punct de interes"
+    },
+    "ConnectingHandling":{
+        "disconnect":"Deconecteaza-te",
+        "connect":"Conecteaza-te"
     },
     "ContactMap":{
         "title":"Pagina de contact",

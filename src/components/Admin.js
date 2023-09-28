@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { HOST } from './constants'
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 const ADMIN_URL = HOST + 'admin/users';
+
 
 const Admin = () => {
     const [users, setUsers] = useState([]);
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
 
@@ -46,14 +49,14 @@ const Admin = () => {
 
     return (
         <div className="admin-user-display">
-            <table>
+            <tbody>
                 <tr>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>Phone</th>
-                    <th>Roles</th>
+                    <th>{t("Admin.table-1")}</th>
+                    <th>{t("Admin.table-2")}</th>
+                    <th>{t("Admin.table-3")}</th>
+                    <th>{t("Admin.table-4")}</th>
+                    <th>{t("Admin.table-5")}</th>
+                    <th>{t("Admin.table-6")}</th>
                 </tr>
                 {users && users.map((user, key) => (
                     <tr key={key}>
@@ -65,7 +68,7 @@ const Admin = () => {
                         <td>{user.roles.join()}</td>
                     </tr>
                 ))}
-            </table>
+            </tbody>
         </div>
     )
 }

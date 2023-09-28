@@ -1,40 +1,47 @@
 import {React, useEffect} from 'react';
+import { useTranslation } from 'react-i18next';
 import videoCar2 from '../assets/img/abstract2.mp4'
 import 'remixicon/fonts/remixicon.css'; 
 import SingleCard from './SingleCard';
 import { MileChart }  from './MileChart';
 import CarStatsChart from './CarStatsChart';
 import carImg1 from '../assets/img/mercedes-1.png'
+
 import { RecommendCarCard } from './RecommendCarCard';
 // import { recommendCars } from './recommendCarsData';
 
-const carObj = {
-  title: 'Total Cars',
-  totalNumber:750,
-  icon:'ri-roadster-line'
-}
 
 
-const tripObj = {
-  title: 'Daily Tips',
-  totalNumber:1654,
-  icon:'ri-steering-fill'
-}
 
-const clientObj = {
-  title: 'Clients Annually',
-  totalNumber:'23k',
-  icon:'ri-user-2-line'
-}
 
-const distanceObj = {
-  title: 'Kilometers Daily',
-  totalNumber:2167,
-  icon:'ri-timer-flash-line'
-}
 
 export const CarProfile = () => {
 
+  const { t, i18n } = useTranslation();
+  const carObj = {
+    title: t("CarProfile.total-cars"),
+    totalNumber:750,
+    icon:'ri-roadster-line'
+  }
+  
+  
+  const tripObj = {
+    title: t("CarProfile.daily-tips"),
+    totalNumber:1654,
+    icon:'ri-steering-fill'
+  }
+  
+  const clientObj = {
+    title: t("CarProfile.clients-annually"),
+    totalNumber:'23k',
+    icon:'ri-user-2-line'
+  }
+  
+  const distanceObj = {
+    title: t("CarProfile.kilometers-daily"),
+    totalNumber:2167,
+    icon:'ri-timer-flash-line'
+  }
   useEffect(() => {
    
     window.scrollTo(0, 0);
@@ -59,12 +66,12 @@ export const CarProfile = () => {
 
     <div className="statics">
     <div className="stats">
-      <h3 className="stats-title">Miles Statistics</h3>
+      <h3 className="stats-title">{t("CarProfile.statistics-1")}</h3>
       <MileChart />
     </div>
 
     <div className="stats">
-      <h3 className="stats-title">Car Statistics</h3>
+      <h3 className="stats-title">{t("CarProfile.statistics-2")}</h3>
       <CarStatsChart />
     </div>
     </div>
@@ -76,7 +83,7 @@ export const CarProfile = () => {
         <div className="recommend-car-top">
           <h5>
             <span>
-            <i class="ri-refresh-line"></i>74% Recommended
+            <i class="ri-refresh-line"></i>{t("CarProfile.percentage")}
             </span>
           </h5>
         </div>
@@ -84,13 +91,13 @@ export const CarProfile = () => {
           <img src={carImg1} alt="" />
         </div>
         <div className="recommended-car-bottom">
-          <h4>Bmw</h4>
+          <h4>{t("CarProfile.car")}</h4>
           <div className="recommended-car-other">
             <div className="recommend-icons">
             <p>
           
                 <i class="ri-repeat-2-line"></i>
-              130k
+                {t("CarProfile.kilometers")}
             </p>
             <p>
               <span>
