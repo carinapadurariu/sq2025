@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const Editor = () => {
+    const { t, i18n } = useTranslation();
     return (
         <section>
-            <h1>Editors Page</h1>
+            <h1>{t("Editor.title")}</h1>
             <br />
-            <p>You must have been assigned an Editor role.</p>
+            <p>{t("Editor.description")}</p>
             <div className="flexGrow">
-                <Link to="/">Home</Link>
+                <Link to="/">{t("Editor.home-button")}</Link>
             </div>
         </section>
     )

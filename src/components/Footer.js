@@ -7,10 +7,12 @@ import logo from '../assets/img/logo.png';
 import { faFacebook, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from 'react-i18next';
 
 
 
 export const Footer = () => {
+  const { t, i18n } = useTranslation();
   return (
     <footer className="footer">
       <Container>
@@ -48,7 +50,7 @@ export const Footer = () => {
               </li>
             </ul>
             </div>
-            <p>Copyright 2022. All Rights Reserved</p>
+            <p>{t("Footer.copyright")}</p>
           </Col>
           
         </Row>

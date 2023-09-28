@@ -15,10 +15,11 @@ import {
   faStreetView,
   faTruck,
 } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 
 export const ContactMap = () => {
-
+  const { t, i18n } = useTranslation();
   useEffect(() => {
    
     window.scrollTo(0, 0);
@@ -71,7 +72,7 @@ export const ContactMap = () => {
 
       <Container>
         <Row className="align-items-center">
-           <h1 className="contact-text-h1"> Contact Page</h1>
+           <h1 className="contact-text-h1"> {t("ContactMap.title")}</h1>
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) =>
@@ -84,7 +85,7 @@ export const ContactMap = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                  
-                <h2>Let Us Know Your Impressions</h2>
+                <h2>{t("ContactMap.impressions")}</h2>
                 <form onSubmit={handleSubmit}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
@@ -152,41 +153,41 @@ export const ContactMap = () => {
   </Row>
 </Container>
 
-<h4 className="h4-design-contact">Contact</h4>
-<h5 className="h5-contact">Calea Dorobantilor 18- 20, Cluj-Napoca</h5>
-<h6 className="h6-contact">Telefon: 0774.456.341 / 0746.873.981</h6>
-<h7 className="h7-contact">Email: contact@serviceautocluj.ro</h7>
+<h4 className="h4-design-contact">{t("ContactMap.contact-details-title")}</h4>
+<h5 className="h5-contact">{t("ContactMap.contact-details-address")}</h5>
+<h6 className="h6-contact">{t("ContactMap.contact-details-phone")}</h6>
+<h7 className="h7-contact">{t("ContactMap.contact-details-email")}</h7>
 
 <div class="time-table">
-<h2 class="opening-time--title">Program</h2>
+<h2 class="opening-time--title">{t("ContactMap.schedule-title")}</h2>
 <div class="inner-bg">
   <dl class="week-day">
-    <dt>Monday</dt>
-    <dd>08:00 • 18:00</dd>
+    <dt>{t("ContactMap.schedule-day-1")}</dt>
+    <dd>{t("ContactMap.schedule-hour-1")}</dd>
   </dl>
   <dl class="week-day">
-    <dt>Tuesday</dt>
-    <dd>08:00 • 18:00</dd>
+    <dt>{t("ContactMap.schedule-day-2")}</dt>
+    <dd>{t("ContactMap.schedule-hour-1")}</dd>
   </dl>
   <dl class="week-day">
-    <dt>Wednesday</dt>
-    <dd>08:00 • 18:00</dd>
+    <dt>{t("ContactMap.schedule-day-3")}</dt>
+    <dd>{t("ContactMap.schedule-hour-1")}</dd>
   </dl>
   <dl class="week-day">
-    <dt>Thursday</dt>
-    <dd>08:00 • 18:00</dd>
+    <dt>{t("ContactMap.schedule-day-4")}</dt>
+    <dd>{t("ContactMap.schedule-hour-1")}</dd>
   </dl>
   <dl class="week-day">
-    <dt>Friday</dt>
-    <dd>08:00 • 18:00</dd>
+    <dt>{t("ContactMap.schedule-day-5")}</dt>
+    <dd>{t("ContactMap.schedule-hour-1")}</dd>
   </dl>
   <dl class="week-day">
-    <dt>Saturday</dt>
-    <dd>08:00 • 14:00</dd>
+    <dt>{t("ContactMap.schedule-day-6")}</dt>
+    <dd>{t("ContactMap.schedule-hour-2")}</dd>
   </dl>
   <dl class="week-day closed">
-    <dt>Sunday</dt>
-    <dd>Închis</dd>
+    <dt>{t("ContactMap.schedule-day-7")}</dt>
+    <dd>{t("ContactMap.schedule-hour-3")}</dd>
   </dl>
 </div>
 

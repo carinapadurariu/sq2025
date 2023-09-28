@@ -1,10 +1,12 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../context/AuthProvider";
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
     const { setAuth } = useContext(AuthContext);
     const navigate = useNavigate();
+    const { t, i18n } = useTranslation();
 
     const logout = async () => {
         // if used in more components, this should be in context 
@@ -15,19 +17,19 @@ const Home = () => {
 
     return (
         <section>
-            <h1>Home</h1>
+            <h1>{t("Home.title")}</h1>
             <br />
-            <p>You are logged in!</p>
+            <p>{t("Home.logged-in")}</p>
             <br />
-            <Link to="/editor">Go to the Editor page</Link>
+            <Link to="/editor">{t("Home.link-1")}</Link>
             <br />
-            <Link to="/admin">Go to the Admin page</Link>
+            <Link to="/admin">{t("Home.link-2")}</Link>
             <br />
-            <Link to="/lounge">Go to the Lounge</Link>
+            <Link to="/lounge">{t("Home.link-3")}</Link>
             <br />
-            <Link to="/linkpage">Go to the link page</Link>
+            <Link to="/linkpage">{t("Home.link-4")}</Link>
             <div className="flexGrow">
-                <button onClick={logout}>Sign Out</button>
+                <button onClick={logout}>{t("Home.sing-out")}</button>
             </div>
         </section>
     )

@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom"
+import { useTranslation } from 'react-i18next';
 
 const Lounge = () => {
+    const { t, i18n } = useTranslation();
     return (
         <section>
-            <h1>The Lounge</h1>
+            <h1>{t("Lounge.title")}</h1>
             <br />
-            <p>Admins and Editors can hang out here.</p>
+            <p>{t("Lounge.description")}</p>
             <div className="flexGrow">
-                <Link to="/">Home</Link>
+                <Link to="/">{t("Lounge.home-button")}</Link>
             </div>
         </section>
     )

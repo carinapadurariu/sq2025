@@ -10,9 +10,11 @@ import {useNavigate} from "react-router-dom";
 import i18n from 'i18next';
 import AdminLink from './AdminLink';
 import ConnectingHandling from './ConnectingHandling';
+import { useTranslation } from 'react-i18next';
 
 export const MyNavBar = (props) => {
 
+    const { t, i18n } = useTranslation();
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
     const navigate = useNavigate();
@@ -97,8 +99,8 @@ export const MyNavBar = (props) => {
                             </li>
                         </ul>
                         <ConnectingHandling />
-                        <button onClick={() => i18n.changeLanguage('en')}>EN</button>
-                        <button onClick={() => i18n.changeLanguage('ro')}>RO</button>
+                        <button onClick={() => i18n.changeLanguage('en')}>{t("NavBar.en-language")}</button>
+                        <button onClick={() => i18n.changeLanguage('ro')}>{t("NavBar.ro-language")}</button>
                     </span>
                 </Navbar.Collapse>
             </Container>

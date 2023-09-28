@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const Users = () => {
     const [users, setUsers] = useState();
     const axiosPrivate = useAxiosPrivate();
     const navigate = useNavigate();
     const location = useLocation();
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
         let isMounted = true;
@@ -35,13 +37,13 @@ const Users = () => {
 
     return (
         <article>
-            <h2>Users List</h2>
+            <h2>{t("Users.title")}</h2>
             {users?.length
                 ? (
                     <ul>
                         {users.map((user, i) => <li key={i}>{user?.username}</li>)}
                     </ul>
-                ) : <p>No users to display</p>
+                ) : <p>{t("Users.not-found")}</p>
             }
         </article>
     );
