@@ -104,6 +104,20 @@
         "description":"Ai primit rolul de editor",
         "home-button":"Pagina principală"
     },
+    "EditUserProfile": {
+        "delete-button": "Șterge contul",
+        "edit-profile": "Editează profilul",
+        "email": "Email:",
+        "first-name":"Prenume:",
+        "last-name": "Nume de familie:",
+        "phone-number":"Număr de telefon:",
+        "save-changes": "Salvează modificările",
+        "change-password": "Schimbă parola",
+        "current-password": "Parola curentă:",
+        "new-password": "Parola nouă:",
+        "confirm-password": "Confirmă parola:",
+        "edit-password": "Editează parola:"
+    },
     "Footer":{
         "copyright":"Copyright 2022. All Rights Reserved"
     },
@@ -127,6 +141,7 @@
         "private-links-3":"Pagina administratorilor"
     },
     "Login":{
+        "title": "Pagina de login",
         "sign-in":"Loghează-te",
         "username":"Username",
         "password":"Parola",
@@ -152,7 +167,7 @@
         "description-1":"Abonează-te la newsletter-ul nostru",
         "description-2":" & nu pierde nicio ofertă!",
         "sending":"Se trimite...",
-        "submit-button":"Trimite" 
+        "submit-button":"Trimite"
     },
     "Presentation":{
         "title":"Trecem la stații",
@@ -164,6 +179,7 @@
         "image-4":"Rezolvarea problemelor"
     },
     "Register":{
+        "title" : "Înregistrare",
         "success-message":"Succes!",
         "sign-in":"Loghează-te",
         "register-button":"Înregistrează-te",
@@ -179,18 +195,17 @@
         "phone-number-error-1":"10 cifre",
         "email":"Email:",
         "email-error-1":"Trebuie să fie un email valid.",
-        "username":"Username:",
+        "username":"Nume de utilizator:",
         "username-error-1":"4 până la 24 de caractere.",
         "username-error-2":"Trebuie să înceapă cu o literă.",
         "username-error-3":"Sunt permise litere, numere, puncte, cratime și underscore.",
-        "password":"Parola:",
+        "password":"Parolă:",
         "password-error-1":"8 până la 24 de caractere.",
         "password-error-2":"Trebuie să conțină cel puțin o literă mică, o literă mare, un număr și un caracter special.",
         "password-error-3":"Caractere speciale permise: !@#$%^&",
         "confirm-password":"Confirmă parola:",
         "confirm-password-error-1":"Parolele nu se potrivesc.",
-        "sign-up":"Înregistrează-te",
-        "login":"Deja ai un cont?"
+        "login":"Ai deja un cont?"
     },
     "Unauthorized":{
         "title":"Acces neautorizat",
@@ -200,7 +215,7 @@
     "UserPage":{
         "loading-button":"Se încarcă...",
         "title":"Profilul utilizatorului",
-        "username":"Username:",
+        "username":"Nume de utilizator:",
         "email":"Email:",
         "first-name":"Prenume:",
         "last-name":"Nume de familie:",
