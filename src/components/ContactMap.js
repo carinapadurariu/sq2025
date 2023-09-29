@@ -16,6 +16,7 @@ import {
   faTruck,
 } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
+import {HOST} from './constants'
 
 
 export const ContactMap = () => {
@@ -42,7 +43,9 @@ export const ContactMap = () => {
   const onFormUpdate = (category, value) => {
       setFormDetails({
         ...formDetails,
-        [category]: value
+        [category]: value,
+        "to":formDetails.email,
+        "subject": formDetails.firstName + formDetails.lastName
       })
   }
 
@@ -50,11 +53,11 @@ export const ContactMap = () => {
         e.preventDefault();
         setButtonText("Sending...");
 
-        let response = await fetch(" http://localhost:8080/emails", {
+        let response = await fetch(HOST+'emails', {
           method: "POST",
           headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
+            "Content-Type": "application/json;charset=utf-8",
+          },
       body: JSON.stringify(formDetails),
     });
     setButtonText("Send");
