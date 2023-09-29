@@ -19,7 +19,7 @@ export const CarMap=()=>{
   };
 
   const createInfoWindow = (place) => {
-    let content = '<div style="width:200px;">';
+    let content = '<div style="width:200px;color:black;">';
 
     if (place.name) content += `<strong>${place.name}</strong>`;
     if (place.formatted_address) content += `<br>${place.formatted_address}`;
